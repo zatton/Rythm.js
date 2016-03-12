@@ -1,0 +1,20 @@
+.rythm-box{
+  width:40px;
+  height:40px;
+  margin: 50px;
+  border: solid;
+}
+
+.frequences{
+  width:20px;
+  height:100px;
+  margin: 0px;
+  border: solid;
+  display: inline-block;
+  transition:0.1s;
+}
+
+#container{
+  height:200px;
+  margin-left: 200px;
+}

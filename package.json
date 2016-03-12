@@ -1,0 +1,16 @@
+{
+  "name": "rythm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "rythm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Plouzennec <plouzennec.benjamin@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp-webserver": "^0.9.1"
+  }
+}
