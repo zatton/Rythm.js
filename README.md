@@ -62,7 +62,7 @@ rythm.start();
 
 //Stop the party
 rythm.stop();
-
+```
 
 Features
 ========
