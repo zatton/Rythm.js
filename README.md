@@ -1,7 +1,7 @@
 Rythm.js
 ========
 
-A javascript librarie that makes your page dancing.
+A javascript library that makes your page dancing.
 
 Actually in developpement
 
