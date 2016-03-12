@@ -8,7 +8,7 @@ Actually in developpement
 Getting started
 ===============
 
-Install with npm
+Install with npm (Soon)
 
 ```
 npm install rythm.js
