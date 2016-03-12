@@ -37,7 +37,32 @@ rythm.start();
 Documentation
 =============
 
-TODO
+IN PROGESS
+
+```javascript
+var rythm = new Rythm();
+
+//Default 1
+rythm.startingScale = value;
+
+//Default 100
+rythm.maxValueHistory = value;
+
+//Default 0.75
+rythm.pulseRatio = value;
+
+//Set the music the page will dance to.
+rythm.setMusic(audioElement);
+
+//Adjust the gain of the music.
+rythm.setGain(value);
+
+//Let's dance
+rythm.start();
+
+//Stop the party
+rythm.stop();
+
 
 Features
 ========
