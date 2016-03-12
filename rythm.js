@@ -9,9 +9,12 @@ function Rythm(){
   that._audio;
   that._hzHistory = [];
   that._analyser.fftSize = 64;
+  that._stopped = false;
+  //Public
+  that.startingScale = 1;
   that.pulseRatio = 0.75;
-  that.buffer = 100;
-  
+  that.maxValueHistory = 100;
+
   that.setMusic = function setMusic(audioSource){
     that._audio = audioSource;
     that._source = that._audioCtx.createMediaElementSource(that._audio);
@@ -28,16 +31,25 @@ function Rythm(){
     that._hzHistory = []
     that._frequences = new Uint8Array(that._analyser.frequencyBinCount);
     that._audio.play();
+    that._stopped = false;
     renderRythm();
   }
 
+  that.stop = function stop(){
+    that._audio.pause();
+    that._stopped = true;
+  }
+
   function renderRythm() {
+    if(that._stopped){
+      return;
+    }
     that._analyser.getByteFrequencyData(that._frequences);
     for(var i=0; i<that._frequences.length; i++){
       if(!that._hzHistory[i]){
         that._hzHistory[i] = [];
       }
-      if(that._hzHistory[i].length > that.buffer){
+      if(that._hzHistory[i].length > that.maxValueHistory){
         that._hzHistory[i].shift();
       }
       that._hzHistory[i].push(that._frequences[i]);
@@ -63,23 +75,12 @@ function Rythm(){
     var scale = max - min;
     var actualValue = that._frequences[index] -min;
     var percentage = (actualValue/scale);
-    return 1+(that.pulseRatio * percentage);
+    return that.startingScale + (that.pulseRatio * percentage);
   }
 
   function pulse(name, value){
     var element = document.getElementById(name);
     element.style="transform:scale("+value+")";
   }
-
-}
-
-
-window.onload = function(){
-
-  var rythm = new Rythm();
-  var audio = document.getElementById('audio');
-  rythm.setMusic(audio);
-  rythm.setGain(0.4);
-  rythm.start();
 
 }
