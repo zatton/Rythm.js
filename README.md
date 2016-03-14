@@ -45,6 +45,9 @@ Documentation
 
 IN PROGESS
 
+Rythm object
+------------
+
 ```javascript
 var rythm = new Rythm();
 
@@ -68,6 +71,15 @@ rythm.start();
 
 //Stop the party
 rythm.stop();
+```
+
+Classes
+-------
+
+```
+rythm-bass
+rythm-medium
+rythm-high
 ```
 
 Features
