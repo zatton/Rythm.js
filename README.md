@@ -26,6 +26,12 @@ Create an audio element with your music as source
 <audio id="audio" src="../samples/rythmC.mp3"></audio>
 ```
 
+Add one the rythm css classes to indicate which element will dance.
+
+```html
+<div class="rythm-bass"></div>
+```
+
 Create a Rythm object and give it the audio element then use the start function
 ```javascript
 var rythm = new Rythm();
