@@ -55,9 +55,9 @@ function Rythm(){
       that._hzHistory[i].push(that._frequences[i]);
       var value = that._frequences[i];
     }
-    pulse("bass", getRatio(2));
-    pulse("medium", getRatio(6));
-    pulse("hight", getRatio(9));
+    pulse("rythm-bass", getRatio(2));
+    pulse("rythm-medium", getRatio(6));
+    pulse("rythm-high", getRatio(9));
     requestAnimationFrame(renderRythm);
   }
 
@@ -79,8 +79,10 @@ function Rythm(){
   }
 
   function pulse(name, value){
-    var element = document.getElementById(name);
-    element.style="transform:scale("+value+")";
+    var elements = document.getElementsByClassName(name);
+    for(var i = 0; i < elements.length; i++){
+      elements[i].style="transform:scale("+value+")"
+    }
   }
 
 }
