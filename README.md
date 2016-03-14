@@ -1,6 +1,8 @@
 Rythm.js
 ========
 
+Link to the documentation : http://okazari.github.io/Rythm.js/
+
 A javascript library that makes your page dancing.
 
 Actually in developpement
