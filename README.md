@@ -1,7 +1,7 @@
 Rythm.js
 ========
 
-Link to the documentation : http://okazari.github.io/Rythm.js/
+Demo at : http://okazari.github.io/Rythm.js/
 
 A javascript library that makes your page dancing.
 
@@ -10,13 +10,13 @@ Actually in developpement
 Getting started
 ===============
 
-Install with npm (Soon)
+Install with npm
 
 ```
 npm install rythm.js
 ```
 
-Import rythm in to your page
+Import rythm into your page
 
 ```html
 <script type="text/javascript" src="../rythm.js"></script>
@@ -34,7 +34,7 @@ Add one the rythm css classes to indicate which element will dance.
 <div class="rythm-bass"></div>
 ```
 
-Create a Rythm object and give it the audio element then use the start function
+Create a Rythm object and give it the audio element then use the start function.
 ```javascript
 var rythm = new Rythm();
 var audio = document.getElementById('audio');
@@ -53,19 +53,32 @@ Rythm object
 ```javascript
 var rythm = new Rythm();
 
-//Default 1
+/* The starting scale is the minimum scale your elements will take (Scale ratio is startingScale + (pulseRatio * currentPulse));
+ * Value in percentage between 0-1
+ * Default 1
+ */
 rythm.startingScale = value;
 
-//Default 100
-rythm.maxValueHistory = value;
-
-//Default 0.75
+/* The pulse ratio is be the maximum additionnal scale your element will take (Scale ratio is startingScale + (pulseRatio * currentPulse))
+ * Value in percentage between 0-1
+ * Default 0.75
+ */
 rythm.pulseRatio = value;
 
-//Set the music the page will dance to.
+/* The max value history represent the number of passed value stored to evaluate the current pulse.
+ * Int value, minimum 1
+ * Default 100
+ */
+rythm.maxValueHistory = value;
+
+/* Set the music the page will dance to.
+ * @audioElement : HTMLAudioElement
+ */
 rythm.setMusic(audioElement);
 
-//Adjust the gain of the music.
+/* Adjust the gain of the music.
+ * value : Number
+ */
 rythm.setGain(value);
 
 //Let's dance
