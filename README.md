@@ -45,8 +45,6 @@ rythm.start();
 Documentation
 =============
 
-IN PROGESS
-
 Rythm object
 ------------
 
