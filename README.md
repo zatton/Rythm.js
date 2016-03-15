@@ -65,7 +65,7 @@ rythm.startingScale = value;
  */
 rythm.pulseRatio = value;
 
-/* The max value history represent the number of passed value stored to evaluate the current pulse.
+/* The max value history represent the number of passed value that will be stored to evaluate the current pulse.
  * Int value, minimum 1
  * Default 100
  */
@@ -76,7 +76,7 @@ rythm.maxValueHistory = value;
  */
 rythm.setMusic(audioElement);
 
-/* Adjust the gain of the music.
+/* Adjust music's gain.
  * value : Number
  */
 rythm.setGain(value);
@@ -91,18 +91,21 @@ rythm.stop();
 Classes
 -------
 
-```
-rythm-bass
-rythm-medium
-rythm-high
-```
++ rythm-bass
++ rythm-medium
++ rythm-high
 
 Features
 ========
 
-TODO
+ + You actually can add classes to make your HTML Elements pulse following the rythm of your music.
 
 Contribute
 ==========
 
-TODO
+Any pull request will be apreciated. You can start coding on this project following this steps :
+ + Fork the project
+ + Clone your repository
+ + run ```npm install```
+ + run ```gulp``` in the main folder to launch a development webserver.
+ + Enjoy the rythm.
