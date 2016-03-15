@@ -100,6 +100,11 @@ Features
 
  + You actually can add classes to make your HTML Elements pulse following the rythm of your music.
 
+Future
+------
+ + Add more rythm class frequences
+ + Add rythm move class (pulse, rotate etc...)
+
 Contribute
 ==========
 
