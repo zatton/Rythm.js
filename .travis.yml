@@ -1,8 +1,7 @@
-language: noe_js
+language: node_js
 node_js:
   - "node"
   - "iojs"
 branches:
   only:
     - master
-#Yeah travis build !
