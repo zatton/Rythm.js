@@ -1,5 +1,7 @@
 Rythm.js
 ========
+[![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
+
 
 Demo at : http://okazari.github.io/Rythm.js/
 
