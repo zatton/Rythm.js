@@ -1,7 +1,7 @@
 Rythm.js
 ========
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
-
+[![Code Climate](https://codeclimate.com/github/Okazari/Rythm.js/badges/gpa.svg)](https://codeclimate.com/github/Okazari/Rythm.js/code)
 
 Demo at : http://okazari.github.io/Rythm.js/
 
