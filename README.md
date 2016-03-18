@@ -55,13 +55,13 @@ var rythm = new Rythm();
 
 /* The starting scale is the minimum scale your elements will take (Scale ratio is startingScale + (pulseRatio * currentPulse));
  * Value in percentage between 0-1
- * Default 1
+ * Default 0.75
  */
 rythm.startingScale = value;
 
 /* The pulse ratio is be the maximum additionnal scale your element will take (Scale ratio is startingScale + (pulseRatio * currentPulse))
  * Value in percentage between 0-1
- * Default 0.75
+ * Default 0.30
  */
 rythm.pulseRatio = value;
 

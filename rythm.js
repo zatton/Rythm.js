@@ -11,8 +11,8 @@ function Rythm(){
   that._analyser.fftSize = 64;
   that._stopped = false;
   //Public
-  that.startingScale = 1;
-  that.pulseRatio = 0.75;
+  that.startingScale = 0.75;
+  that.pulseRatio = 0.30;
   that.maxValueHistory = 100;
 
   that.setMusic = function setMusic(audioSource){
