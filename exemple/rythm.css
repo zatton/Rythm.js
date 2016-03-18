@@ -8,7 +8,7 @@
 .frequences{
   width:20px;
   height:100px;
-  margin: 0px;
+  margin: 0;
   border: solid;
   display: inline-block;
   transition:0.1s;

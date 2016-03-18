@@ -5,8 +5,8 @@ function Rythm(){
   that._audioCtx = new AudioContext();
   that._analyser = that._audioCtx.createAnalyser();
   that._gain = that._audioCtx.createGain();
-  that._source;
-  that._audio;
+  that._source = {};
+  that._audio = {};
   that._hzHistory = [];
   that._analyser.fftSize = 64;
   that._stopped = false;
