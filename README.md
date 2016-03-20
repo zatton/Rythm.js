@@ -81,6 +81,16 @@ rythm.setMusic(audioElement);
  */
 rythm.setGain(value);
 
+/* Add your own rythm-class
+ * elementClass: That you want to link your rythm to.
+ * startValue: The starting frequence of your rythm.
+ * nbValue: The number of frequences of your rythm.
+ * 1024 Frequences, your rythm will react to the average of your selected frequences.
+ * Exemples : bass 0-10 ; medium 150-40 ; high 500-100
+ */
+
+rythm.addRythm(elementClass, startValue, nbValue);
+
 //Let's dance
 rythm.start();
 

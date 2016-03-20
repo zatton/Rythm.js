@@ -14,6 +14,20 @@ function Rythm(){
   that.startingScale = 0.75;
   that.pulseRatio = 0.50;
   that.maxValueHistory = 100;
+  that.rythmMapping = []
+
+  that.addRythm = function addRythm(elementClass, type, startValue, nbValue){
+    that.rythmMapping.push({
+      elementClass: elementClass,
+      type:type,
+      startValue: startValue,
+      nbValue: nbValue
+    });
+  }
+
+  that.addRythm('rythm-bass','size',0,10);
+  that.addRythm('rythm-medium','size',150,40);
+  that.addRythm('rythm-high','size',500,100);
 
   that.setMusic = function setMusic(audioSource){
     that._audio = audioSource;
@@ -55,9 +69,12 @@ function Rythm(){
       that._hzHistory[i].push(that._frequences[i]);
       var value = that._frequences[i];
     }
-    pulse("rythm-bass", getAverageRatio(0, 10));
-    pulse("rythm-medium", getAverageRatio(150, 40));
-    pulse("rythm-high", getAverageRatio(500,100));
+    that.rythmMapping.forEach(function(mappingItem){
+      switch (mappingItem.type) {
+        default:
+          pulseSize(mappingItem.elementClass, getAverageRatio(mappingItem.startValue, mappingItem.nbValue));
+      }
+    })
     requestAnimationFrame(renderRythm);
   }
 
@@ -86,7 +103,7 @@ function Rythm(){
     return that.startingScale + (that.pulseRatio * percentage);
   }
 
-  function pulse(name, value){
+  function pulseSize(name, value){
     var elements = document.getElementsByClassName(name);
     for(var i = 0; i < elements.length; i++){
       elements[i].style.transform = 'scale('+value+')'
