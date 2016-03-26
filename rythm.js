@@ -98,9 +98,16 @@ function Rythm(){
     }else if(that._rythmInputType === that._rythmInputTypeList['STREAM']){
       that._audio.getAudioTracks()[0].enabled = false
     }
+    that.rythmMapping.forEach(function(mappingItem){
+      var elements = document.getElementsByClassName(mappingItem.elementClass);
+      for(var i = 0; i < elements.length; i++){
+        elements[i].style.transform = 'scale('+1+')'
+      }
+    })
     that._init();
     that.stopped = true;
   }
+
 
   function renderRythm() {
     if(that.stopped){
