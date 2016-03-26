@@ -4,7 +4,7 @@ Rythm.js
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
 [![Code Climate](https://codeclimate.com/github/Okazari/Rythm.js/badges/gpa.svg)](https://codeclimate.com/github/Okazari/Rythm.js/code)
 
-Demo at : http://okazari.github.io/Rythm.js/
+Demo at : https://okazari.github.io/Rythm.js/
 
 A javascript library that makes your page dancing.
 
@@ -87,6 +87,7 @@ rythm.addRythm(elementClass, danceType, startValue, nbValue);
 
 /* Plug your computer microphone to rythm.js
  * This function return a promise resolved when the microphone is up.
+ * Require your website to be run in HTTPS
  */
 rythm.plugMicrophone().then(function(){...})
 
