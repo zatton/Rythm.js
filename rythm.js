@@ -3,13 +3,21 @@ function Rythm(){
   var that = this;
 
   that._audioCtx = new AudioContext();
-  that._analyser = that._audioCtx.createAnalyser();
-  that._gain = that._audioCtx.createGain();
-  that._source = {};
-  that._audio = {};
-  that._hzHistory = [];
-  that._analyser.fftSize = 2048;
-  that._stopped = false;
+
+  that._init = function(){
+    that._analyser = that._audioCtx.createAnalyser();
+    that._gain = that._audioCtx.createGain();
+    that._source = {};
+    that._audio = {};
+    that._hzHistory = [];
+    that._analyser.fftSize = 2048;
+  }
+
+  that.stopped = false;
+  that._rythmInputTypeList = {
+    "TRACK" : 0,
+    "STREAM" : 1
+  }
   //Public
   that.startingScale = 0.75;
   that.pulseRatio = 0.50;
@@ -29,12 +37,45 @@ function Rythm(){
   that.addRythm('rythm-medium','size',150,40);
   that.addRythm('rythm-high','size',500,100);
 
-  that.setMusic = function setMusic(audioSource){
-    that._audio = audioSource;
-    that._source = that._audioCtx.createMediaElementSource(that._audio);
-    that._source.connect(that._gain);
+  that._connectSource = function _connectSource(source){
+    source.connect(that._gain);
     that._gain.connect(that._analyser);
-    that._analyser.connect(that._audioCtx.destination);
+    if(that._rythmInputType === that._rythmInputTypeList['TRACK']){
+      that._analyser.connect(that._audioCtx.destination);
+    }
+  }
+
+  that.setMusic = function setMusic(trackUrl){
+    that._init();
+    that._audio = new Audio(trackUrl);
+    that._rythmInputType = that._rythmInputTypeList['TRACK'];
+    that._source = that._audioCtx.createMediaElementSource(that._audio);
+    that._connectSource(that._source);
+  }
+
+  that.plugMicrophone = function plugMicrophone(){
+    that._init();
+    return that._getMicrophoneStream().then(function(stream){
+      that._audio = stream;
+      that._rythmInputType = that._rythmInputTypeList['STREAM'];
+      that._source = that._audioCtx.createMediaStreamSource(stream);
+      that._connectSource(that._source);
+    })
+  }
+
+  that._getMicrophoneStream = function _getMicrophoneStream(){
+    navigator.getUserMedia = (navigator.getUserMedia ||
+                              navigator.webkitGetUserMedia ||
+                              navigator.mozGetUserMedia ||
+                              navigator.msGetUserMedia);
+    return new Promise(function(resolve, reject){
+      navigator.getUserMedia({audio:true},
+        function(medias){
+          resolve(medias);
+        },function(error){
+          reject(error);
+        })
+    });
   }
 
   that.setGain = function setGain(value){
@@ -44,18 +85,25 @@ function Rythm(){
   that.start = function start(){
     that._hzHistory = []
     that._frequences = new Uint8Array(that._analyser.frequencyBinCount);
-    that._audio.play();
-    that._stopped = false;
+    if(that._rythmInputType === that._rythmInputTypeList['TRACK']){
+      that._audio.play();
+    }
+    that.stopped = false;
     renderRythm();
   }
 
   that.stop = function stop(){
-    that._audio.pause();
-    that._stopped = true;
+    if(that._rythmInputType === that._rythmInputTypeList['TRACK']){
+      that._audio.pause();
+    }else if(that._rythmInputType === that._rythmInputTypeList['STREAM']){
+      that._audio.getAudioTracks()[0].enabled = false
+    }
+    that._init();
+    that.stopped = true;
   }
 
   function renderRythm() {
-    if(that._stopped){
+    if(that.stopped){
       return;
     }
     that._analyser.getByteFrequencyData(that._frequences);

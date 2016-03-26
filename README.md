@@ -1,5 +1,6 @@
 Rythm.js
 ========
+
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
 [![Code Climate](https://codeclimate.com/github/Okazari/Rythm.js/badges/gpa.svg)](https://codeclimate.com/github/Okazari/Rythm.js/code)
 
@@ -24,23 +25,16 @@ Import rythm into your page
 <script type="text/javascript" src="../rythm.js"></script>
 ```
 
-Create an audio element with your music as source
-
-```html
-<audio id="audio" src="../samples/rythmC.mp3"></audio>
-```
-
-Add one the rythm css classes to indicate which element will dance.
+Add one of the rythm css classes to indicate which element will dance.
 
 ```html
 <div class="rythm-bass"></div>
 ```
 
-Create a Rythm object and give it the audio element then use the start function.
+Create a Rythm object and give it your audio url then use the start function.
 ```javascript
 var rythm = new Rythm();
-var audio = document.getElementById('audio');
-rythm.setMusic(audio);
+rythm.setMusic("../examples/sample.mp3");
 rythm.start();
 ```
 
@@ -72,24 +66,28 @@ rythm.pulseRatio = value;
 rythm.maxValueHistory = value;
 
 /* Set the music the page will dance to.
- * @audioElement : HTMLAudioElement
+ * @audioUrl : '../example/mysong.mp3'
  */
-rythm.setMusic(audioElement);
+rythm.setMusic(audioUrl);
 
 /* Adjust music's gain.
- * value : Number
+ * @value : Number
  */
 rythm.setGain(value);
 
 /* Add your own rythm-class
- * elementClass: Class that you want to link your rythm to.
- * startValue: The starting frequence of your rythm.
- * nbValue: The number of frequences of your rythm.
+ * @elementClass: Class that you want to link your rythm to.
+ * @startValue: The starting frequence of your rythm.
+ * @nbValue: The number of frequences of your rythm.
  * 1024 Frequences, your rythm will react to the average of your selected frequences.
  * Exemples : bass 0-10 ; medium 150-40 ; high 500-100
  */
-
 rythm.addRythm(elementClass, startValue, nbValue);
+
+/* Plug your computer microphone to rythm.js
+ * This function return a promise resolved when the microphone is up.
+ */
+rythm.plugMicrophone().then(function(){...})
 
 //Let's dance
 rythm.start();
