@@ -77,12 +77,13 @@ rythm.setGain(value);
 
 /* Add your own rythm-class
  * @elementClass: Class that you want to link your rythm to.
+ * @danceType : Atm just use "size";
  * @startValue: The starting frequence of your rythm.
  * @nbValue: The number of frequences of your rythm.
  * 1024 Frequences, your rythm will react to the average of your selected frequences.
  * Exemples : bass 0-10 ; medium 150-40 ; high 500-100
  */
-rythm.addRythm(elementClass, startValue, nbValue);
+rythm.addRythm(elementClass, danceType, startValue, nbValue);
 
 /* Plug your computer microphone to rythm.js
  * This function return a promise resolved when the microphone is up.
@@ -102,6 +103,15 @@ Classes
 + rythm-bass
 + rythm-medium
 + rythm-high
+
+Custom-classes
+--------------
+
+You can use the `addRythm` function to make your own classes listen to specifics frequences.
+Here is how the basics classes are created :
++ `addRythm('rythm-bass','size',0,10);`
++ `addRythm('rythm-medium','size',150,40);`
++ `addRythm('rythm-high','size',500,100);`
 
 Features
 ========
