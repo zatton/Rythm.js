@@ -131,5 +131,5 @@ Any pull request will be apreciated. You can start coding on this project follow
  + Fork the project
  + Clone your repository
  + run ```npm install```
- + run ```gulp``` in the main folder to launch a development webserver.
+ + run ```nom start``` in the main folder to launch a development webserver.
  + Enjoy the rythm.
