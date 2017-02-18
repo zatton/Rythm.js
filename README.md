@@ -21,6 +21,9 @@ npm install rythm.js
 
 CDN: https://unpkg.com/rythm.js/
 
+Old good way
+------------
+
 Import rythm into your page
 
 ```html
@@ -36,8 +39,18 @@ Add one of the rythm css classes to indicate which element will dance.
 Create a Rythm object and give it your audio url then use the start function.
 ```javascript
 var rythm = new Rythm();
-rythm.setMusic("../examples/sample.mp3");
+rythm.setMusic("path/to/sample.mp3");
 rythm.start();
+```
+
+ES6 module
+----------
+
+```js
+  import Rythm from 'rythm.js'
+  const rythm = new Rythm();
+  rythm.setMusic("path/to/sample.mp3");
+  rythm.start();
 ```
 
 Documentation
