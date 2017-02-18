@@ -19,6 +19,9 @@ window.onload = function(){
           rythm.stop();
       }
       rythm.setMusic("../samples/rythmC.mp3");
+      rythm.setGain(0.1)
       rythm.start();
     })
+        
 }
+
