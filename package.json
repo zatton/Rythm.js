@@ -1,9 +1,10 @@
 {
   "name": "rythm.js",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "",
   "main": "rythm.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"No test specified\" && exit 0"
   },
   "author": "Benjamin Plouzennec <plouzennec.benjamin@gmail.com>",
