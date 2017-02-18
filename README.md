@@ -21,7 +21,7 @@ npm install rythm.js
 
 CDN: https://unpkg.com/rythm.js/
 
-Old good way
+Good old way
 ------------
 
 Import rythm into your page
