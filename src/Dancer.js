@@ -18,7 +18,7 @@ class Dancer {
   dance(type, className, ratio, options) {
     const dance = this.dances[type] || this.dances['size']
     const elements = document.getElementsByClassName(className)
-    Array.from(elements).forEach(elem => dance.apply(elem, ratio, options))
+    Array.from(elements).forEach(elem => dance(elem, ratio, options))
   }
 }
 
