@@ -7,11 +7,12 @@ export default class Rythm {
   constructor() {
     this.player = player
     this.analyser = analyser
+    this.maxValueHistory = analyser.maxValueHistory
     this.dancer = dancer
     this.rythms = []
-    this.addRythm('rythm-bass','jump',0,10)
-    this.addRythm('rythm-medium','jump',150,40)
-    this.addRythm('rythm-high','jump',400,200)
+    this.addRythm('rythm-bass','pulse',0,10)
+    this.addRythm('rythm-medium','pulse',150,40)
+    this.addRythm('rythm-high','pulse',400,200)
   }
 
   connectExternalAudioElement = (audioElement) => this.player.connectExternalAudioElement (audioelement)
@@ -21,6 +22,15 @@ export default class Rythm {
   plugMicrophone = () => this.player.plugMicrophone()
 
   setGain = (value) => this.player.setGain(value)
+
+  addRythm = (elementClass, type, startValue, nbValue) => {
+    this.rythms.push({
+      elementClass,
+      type,
+      startValue,
+      nbValue
+    })
+  }
 
   start = () => {
     this.stopped = false
@@ -44,12 +54,4 @@ export default class Rythm {
     this.player.stop()
   }
 
-  addRythm = (elementClass, type, startValue, nbValue) => {
-    this.rythms.push({
-      elementClass,
-      type,
-      startValue,
-      nbValue
-    })
-  }
 }
