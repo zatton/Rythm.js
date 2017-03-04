@@ -211,8 +211,8 @@ Adding new dance type
 ---------
 
 In v2.0.0 adding a new dance type is pretty easy 
-1. Create a new file in `src\dances`
-2. This file must export your custom dance type function
++ Create a new file in `src\dances`
++ This file must export your custom dance type function
 
 For example, here is the content of `jump.js file`
 
@@ -229,7 +229,7 @@ export default (elem, value, options = {}) => {
   elem.style.transform = `translateY(${-jump}px)`
 }
 ```
-3. Import it and register it into the constructor of `Dancer.js` file
++ Import it and register it into the constructor of `Dancer.js` file
 ```js
 import jump from './dances/jump.js'
 class Dancer {
@@ -239,7 +239,7 @@ class Dancer {
 }
 ```
 
-4. Commit it and create a PR. Then look at everyone enjoying your contribution :) !
++ Commit it and create a PR. Then look at everyone enjoying your contribution :) !
 
 Licence : GNU GPL
 
