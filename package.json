@@ -14,7 +14,7 @@
     "build": "rollup -c"
   },
   "author": "Benjamin Plouzennec <plouzennec.benjamin@gmail.com>",
-  "license": "ISC",
+  "license": "GNU GPL",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.1.1",
