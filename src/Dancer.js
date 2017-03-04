@@ -22,7 +22,10 @@ class Dancer {
   }
 
   dance(type, className, ratio, options) {
-    const dance = this.dances[type] || this.dances['size']
+    let dance = type
+    if( typeof type === 'string' ) {
+      dance = this.dances[type] || this.dances['pulse']
+    } 
     const elements = document.getElementsByClassName(className)
     Array.from(elements).forEach(elem => dance(elem, ratio, options))
   }
