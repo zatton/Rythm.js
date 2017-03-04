@@ -26,6 +26,7 @@ button, a {
 }
 
 a {
+  transition: none;
   text-decoration: none;
   color: cadetblue;
   margin: 0 10px;
