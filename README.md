@@ -171,7 +171,7 @@ To see each visual effect, you can go to the [Demo](https://okazari.github.io/Ry
 
 Custom dance type
 -------
-If you want to add you own dance type, you can give a function as the 2nd argument of `addRythm`
+If you want to use your own dance type, you can give a function as the 2nd argument of `addRythm`
 
 ```js
 /* The custom function signature is :
