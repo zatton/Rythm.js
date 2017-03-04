@@ -10,9 +10,9 @@ export default class Rythm {
     this.maxValueHistory = analyser.maxValueHistory
     this.dancer = dancer
     this.rythms = []
-    this.addRythm('rythm-bass','twist',0,10)
-    this.addRythm('rythm-medium','twist',150,40)
-    this.addRythm('rythm-high','twist',400,200)
+    this.addRythm('rythm-bass','pulse',0,10)
+    this.addRythm('rythm-medium','pulse',150,40)
+    this.addRythm('rythm-high','pulse',400,200)
   }
 
   connectExternalAudioElement = (audioElement) => this.player.connectExternalAudioElement (audioelement)
