@@ -22,7 +22,7 @@ npm install rythm.js
 CDN : 
 ```
 https://unpkg.com/rythm.js/
-https://cdnjs.cloudflare.com/ajax/libs/rythm.js/1.2.4/rythm.min.js
+https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.0.0/rythm.min.js
 ```
 Good old way
 ------------
