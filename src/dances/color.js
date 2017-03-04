@@ -1,6 +1,6 @@
 export default (elem, value, options = {}) => {
-  const from = options.from || [70,90,200]
-  const to = options.to || [200,50,0]
+  const from = options.from || [0,0,0]
+  const to = options.to || [255,255,255]
   const scaleR = (to[0] - from[0]) * value
   const scaleG = (to[1] - from[1]) * value
   const scaleB = (to[2] - from[2]) * value

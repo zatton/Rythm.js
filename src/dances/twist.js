@@ -1,6 +1,6 @@
 export default (elem, value, options = {}) => {
-  let max = options.max || 20
-  let min = options.min || -20
+  let max = !isNaN(options.max) ? options.max : 20
+  let min = !isNaN(options.min) ? options.min : -20
   if (options.direction === 'left') {
     max = -max
     min = -min
