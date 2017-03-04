@@ -1,6 +1,7 @@
 import pulse from './dances/pulse.js'
 import shake from './dances/shake.js'
 import jump from './dances/jump.js'
+import twist from './dances/twist.js'
 
 class Dancer {
   constructor() {
@@ -9,6 +10,7 @@ class Dancer {
     this.registerDance('pulse', pulse)
     this.registerDance('shake', shake)
     this.registerDance('jump', jump)
+    this.registerDance('twist', twist)
   }
 
   registerDance(type, value) {
