@@ -45,15 +45,15 @@ var Analyser = function Analyser() {
 
   this.analyse = function () {
     _this.analyser.getByteFrequencyData(_this.frequences);
-    _this.frequences.forEach(function (frequence, i) {
+    for (var i = 0; i < _this.frequences.length; i++) {
       if (!_this.hzHistory[i]) {
         _this.hzHistory[i] = [];
       }
       if (_this.hzHistory[i].length > _this.maxValueHistory) {
         _this.hzHistory[i].shift();
       }
-      _this.hzHistory[i].push(frequence);
-    });
+      _this.hzHistory[i].push(_this.frequences[i]);
+    }
   };
 
   this.getRangeAverageRatio = function (startingValue, nbValue) {

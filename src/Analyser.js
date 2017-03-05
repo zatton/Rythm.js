@@ -19,15 +19,15 @@ class Analyser {
 
   analyse = () => {
     this.analyser.getByteFrequencyData(this.frequences)
-    this.frequences.forEach((frequence, i) => {
+    for(let i=0; i < this.frequences.length; i++){  
       if(!this.hzHistory[i]){
         this.hzHistory[i] = []
       }
       if(this.hzHistory[i].length > this.maxValueHistory){
         this.hzHistory[i].shift()
       }
-      this.hzHistory[i].push(frequence)
-    })
+      this.hzHistory[i].push(this.frequences[i])
+    }
   }
 
   getRangeAverageRatio = (startingValue, nbValue) => {
