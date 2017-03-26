@@ -101,7 +101,7 @@ var Player = function Player() {
   this.connectExternalAudioElement = function (audioElement) {
     _this.audio = audioElement;
     _this.currentInputType = _this.inputTypeList['EXTERNAL'];
-    _this.source = _this.createSourceFromAudioElement(_this.audioElement);
+    _this.source = _this.createSourceFromAudioElement(_this.audio);
     _this.connectSource(_this.source);
   };
 
