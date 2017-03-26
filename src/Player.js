@@ -23,7 +23,7 @@ class Player {
   connectExternalAudioElement = (audioElement) => {
     this.audio = audioElement
     this.currentInputType = this.inputTypeList['EXTERNAL']
-    this.source = this.createSourceFromAudioElement(this.audioElement)
+    this.source = this.createSourceFromAudioElement(this.audio)
     this.connectSource(this.source)
   }
 
