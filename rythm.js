@@ -286,7 +286,7 @@ var Rythm$1 = function Rythm() {
   classCallCheck(this, Rythm);
 
   this.connectExternalAudioElement = function (audioElement) {
-    return _this.player.connectExternalAudioElement(audioelement);
+    return _this.player.connectExternalAudioElement(audioElement);
   };
 
   this.setMusic = function (url) {

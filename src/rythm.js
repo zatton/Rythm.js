@@ -15,7 +15,7 @@ export default class Rythm {
     this.addRythm('rythm-high', 'pulse', 400, 200)
   }
 
-  connectExternalAudioElement = (audioElement) => this.player.connectExternalAudioElement (audioelement)
+  connectExternalAudioElement = (audioElement) => this.player.connectExternalAudioElement(audioElement)
 
   setMusic = (url) => this.player.setMusic(url)
 
