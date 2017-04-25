@@ -1,4 +1,4 @@
-Rythm.js - v2.0.3
+Rythm.js - v2.0.4
 ========
 
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
@@ -19,7 +19,7 @@ Install with npm
 npm install rythm.js
 ```
 
-CDN : 
+CDN :
 ```
 https://unpkg.com/rythm.js/
 https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.0.0/rythm.min.js
@@ -124,7 +124,7 @@ rythm.stop();
 Build in classes with "pulse" effect
 -------
 
-+ rythm-bass 
++ rythm-bass
 + rythm-medium
 + rythm-high
 
@@ -210,7 +210,7 @@ Any pull request will be apreciated. You can start coding on this project follow
 Adding new dance type
 ---------
 
-In v2.0.0 adding a new dance type is pretty easy 
+In v2.0.0 adding a new dance type is pretty easy
 + Create a new file in `src\dances`
 + This file must export your custom dance type function
 
