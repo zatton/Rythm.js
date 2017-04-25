@@ -4,6 +4,7 @@ class Player {
   constructor() {
     this.browserAudioCtx = AudioContext || webkitAudioContext
     this.audioCtx = new this.browserAudioCtx()
+    this.connectedSources = []
     Analyser.initialise(this.audioCtx.createAnalyser())
     this.gain = this.audioCtx.createGain()
     this.source = {}
@@ -17,13 +18,22 @@ class Player {
   }
 
   createSourceFromAudioElement = (audioElement) => {
-    return this.audioCtx.createMediaElementSource(audioElement)
+    audioElement.setAttribute('rythm-connected', this.connectedSources.length)
+    const source = this.audioCtx.createMediaElementSource(audioElement)
+    this.connectedSources.push(source)
+    return source
   }
 
   connectExternalAudioElement = (audioElement) => {
     this.audio = audioElement
     this.currentInputType = this.inputTypeList['EXTERNAL']
-    this.source = this.createSourceFromAudioElement(this.audio)
+    const connectedIndex = audioElement.getAttribute('rythm-connected')
+    if (!connectedIndex) {
+      this.source = this.createSourceFromAudioElement(this.audio)
+    } else {
+      this.source = this.connectedSources[connectedIndex]
+      console.log(this.source);
+    }
     this.connectSource(this.source)
   }
 

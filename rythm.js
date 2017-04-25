@@ -95,13 +95,22 @@ var Player = function Player() {
   classCallCheck(this, Player);
 
   this.createSourceFromAudioElement = function (audioElement) {
-    return _this.audioCtx.createMediaElementSource(audioElement);
+    audioElement.setAttribute('rythm-connected', _this.connectedSources.length);
+    var source = _this.audioCtx.createMediaElementSource(audioElement);
+    _this.connectedSources.push(source);
+    return source;
   };
 
   this.connectExternalAudioElement = function (audioElement) {
     _this.audio = audioElement;
     _this.currentInputType = _this.inputTypeList['EXTERNAL'];
-    _this.source = _this.createSourceFromAudioElement(_this.audio);
+    var connectedIndex = audioElement.getAttribute('rythm-connected');
+    if (!connectedIndex) {
+      _this.source = _this.createSourceFromAudioElement(_this.audio);
+    } else {
+      _this.source = _this.connectedSources[connectedIndex];
+      console.log(_this.source);
+    }
     _this.connectSource(_this.source);
   };
 
@@ -161,6 +170,7 @@ var Player = function Player() {
 
   this.browserAudioCtx = AudioContext || webkitAudioContext;
   this.audioCtx = new this.browserAudioCtx();
+  this.connectedSources = [];
   Analyser$1.initialise(this.audioCtx.createAnalyser());
   this.gain = this.audioCtx.createGain();
   this.source = {};

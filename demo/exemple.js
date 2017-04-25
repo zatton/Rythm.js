@@ -33,6 +33,7 @@ window.onload = function(){
     if(rythm.stopped === false){
       rythm.stop();
     }
+    // rythm.connectExternalAudioElement(audio)
     rythm.setMusic("./samples/rythmC.mp3");
     rythm.setGain(0.1)
     rythm.start();
@@ -42,6 +43,5 @@ window.onload = function(){
     if(rythm.stopped === false){
       rythm.stop();
     }
-  }) 
+  })
 }
-
