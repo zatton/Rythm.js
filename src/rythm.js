@@ -23,6 +23,8 @@ export default class Rythm {
 
   setGain = (value) => this.player.setGain(value)
 
+  connectSource = (source) => this.player.connectSource(source)
+
   addRythm = (elementClass, type, startValue, nbValue, options) => {
     this.rythms.push({
       elementClass,
@@ -50,7 +52,7 @@ export default class Rythm {
     requestAnimationFrame(this.renderRythm)
   }
 
-  stop = () => { 
+  stop = () => {
     this.stopped = true
     this.player.stop()
   }

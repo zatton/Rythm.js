@@ -32,7 +32,6 @@ class Player {
       this.source = this.createSourceFromAudioElement(this.audio)
     } else {
       this.source = this.connectedSources[connectedIndex]
-      console.log(this.source);
     }
     this.connectSource(this.source)
   }
