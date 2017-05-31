@@ -1,9 +1,9 @@
 import Analyser from './Analyser.js'
 
 class Player {
-  constructor() {
+  constructor(forceAudioContext) {
     this.browserAudioCtx = AudioContext || webkitAudioContext
-    this.audioCtx = new this.browserAudioCtx()
+    this.audioCtx = forceAudioContext || new this.browserAudioCtx()
     this.connectedSources = []
     Analyser.initialise(this.audioCtx.createAnalyser())
     this.gain = this.audioCtx.createGain()
@@ -92,4 +92,4 @@ class Player {
 
 }
 
-export default new Player()
+export default Player
