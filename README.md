@@ -1,4 +1,4 @@
-Rythm.js - v2.0.6
+Rythm.js - v2.0.7
 ========
 
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
@@ -22,7 +22,7 @@ npm install rythm.js
 CDN :
 ```
 https://unpkg.com/rythm.js/
-https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.0.0/rythm.min.js
+https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.0.7/rythm.min.js
 ```
 Good old way
 ------------
@@ -210,7 +210,7 @@ Any pull request will be apreciated. You can start coding on this project follow
 Adding new dance type
 ---------
 
-In v2.0.0 adding a new dance type is pretty easy
+In v2.0.x adding a new dance type is pretty easy
 + Create a new file in `src\dances`
 + This file must export your custom dance type function
 
