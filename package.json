@@ -8,7 +8,7 @@
     "rythm.min.js"
   ],
   "scripts": {
-    "start": "concurrently --kill-others  \"npm run serve\" \"npm run build -w\"",
+    "start": "concurrently --kill-others  \"npm run serve\" \"npm run build -- -w\"",
     "serve": "gulp serve",
     "prepublish": "npm run build",
     "test": "echo \"No test specified\" && exit 0",
