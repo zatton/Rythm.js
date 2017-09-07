@@ -85,8 +85,11 @@ a:hover {
   min-width: 40px;
   min-height: 40px;
   border-radius: 10px;
-  border: solid 2px white;
-  display: inline-block;
+  /*border: solid 2px white;*/
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  justify-content: center;
   margin: 5px 10px;
 }
 
@@ -110,7 +113,7 @@ section:last-child {
 }
 
 .vanish {
-  background-color: white;
+  /*background-color: white;*/
 }
 
 /* Pretty printing styles. Used with prettify.js. */
