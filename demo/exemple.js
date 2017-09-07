@@ -20,16 +20,16 @@ window.onload = function(){
   rythm.addRythm('color2','color',0,10, { from: [0,0,255], to:[255,0,255] })
   rythm.addRythm('color3','color',0,10, { from: [255,255,0], to:[255,0,0] })
 
-  document.getElementById('mic').addEventListener('click', function(){
+  var onMicClick = function(){
     if(rythm.stopped === false){
       rythm.stop();
     }
     rythm.plugMicrophone().then(function(){
       rythm.start();
     })
-  })
+  }
 
-  document.getElementById('start').addEventListener('click', function(){
+  var onStartClick = function(){
     if(rythm.stopped === false){
       rythm.stop();
     }
@@ -37,11 +37,35 @@ window.onload = function(){
     rythm.setMusic("./samples/rythmC.mp3");
     rythm.setGain(0.1)
     rythm.start();
-  })
+  }
 
-  document.getElementById('stop').addEventListener('click', function(){
+  var onStopClick = function(){
     if(rythm.stopped === false){
       rythm.stop();
+    }
+  }
+
+  document.getElementById('mic').addEventListener('click', onMicClick)
+  document.getElementById('micBottom').addEventListener('click', onMicClick)
+  document.getElementById('start').addEventListener('click', onStartClick)
+  document.getElementById('startBottom').addEventListener('click', onStartClick)
+  document.getElementById('stop').addEventListener('click', onStopClick)
+  document.getElementById('stopBottom').addEventListener('click', onStopClick)
+
+  var bottomPlayerShow = false
+  var showPoint = 205
+  document.addEventListener('scroll', function(){
+    var body = document.body
+    var bottomPlayer = document.getElementById('playerBottom')
+    var shouldShow = !bottomPlayerShow && body.scrollTop > showPoint
+    var shouldHide = bottomPlayerShow && body.scrollTop <= showPoint
+    console.log(bottomPlayerShow, shouldShow, shouldHide)
+    if(shouldShow) {
+      bottomPlayerShow = true
+      bottomPlayer.className = 'show'
+    } else if (shouldHide) {
+      bottomPlayerShow = false
+      bottomPlayer.className = ''
     }
   })
 }

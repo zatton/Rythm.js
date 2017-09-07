@@ -6,13 +6,23 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#player {
+#player, #playerBottom {
   margin-bottom: 25px;
   padding: 10px;
   background-color: #000010;
+  right: 50px;
+}
+
+#playerBottom {
+  position: fixed;
+  bottom: -100px;
+  transition: transform .3s;
   border-radius: 5px;
   border: solid 1px white;
-  right: 50px;
+}
+
+#playerBottom.show {
+  transform: translateY(-70px);
 }
 
 button, a {
@@ -37,29 +47,29 @@ a:hover {
   color: black;
 }
 
-#start {
+#start, #startBottom {
   color: limegreen;
 }
 
-#start:hover {
+#start:hover, #startBottom:hover {
   background-color: limegreen;
   color: black;
 }
 
-#stop {
+#stop, #stopBottom {
   color: indianred;
 }
 
-#stop:hover {
+#stop:hover, #stopBottom:hover {
   background-color: indianred;
   color: black;
 }
 
-#mic {
+#mic, #micBottom {
   color: royalblue;
 }
 
-#mic:hover {
+#mic:hover, #micBottom:hover {
   background-color: royalblue;
   color: black;
 }
