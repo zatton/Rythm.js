@@ -34,10 +34,9 @@ window.onload = function(){
   rythm.addRythm('color1','color',0,10)
   rythm.addRythm('color2','color',0,10, { from: [0,0,255], to:[255,0,255] })
   rythm.addRythm('color3','color',0,10, { from: [255,255,0], to:[255,0,0] })
-  rythm.addRythm('thanks','shake',0,10)
-  rythm.addRythm('contributor-avatar', 'pulse', 0, 10)
-  rythm.addRythm('contributor-login-link','twist',0,10)
-  rythm.addRythm('shout','color',0,10, { from: [128, 128, 128], to:[0, 0, 0] })
+  rythm.addRythm('thanks','shake',0,10, { min: -10, max: 10 })
+  rythm.addRythm('contributor-avatar', 'pulse', 0, 10, { min: 0.5, max: 1.1 })
+  rythm.addRythm('contributor-login-link','jump',0,10, { min: -15, max: 0 })
 
   var onMicClick = function(){
     if(rythm.stopped === false){
