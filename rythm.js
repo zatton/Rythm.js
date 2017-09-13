@@ -273,7 +273,7 @@ var color = (function (elem, value) {
 var reset$5 = function reset(elem) {
   elem.style.backgroundColor = '';
 };
-                      
+
 var radius = (function (elem, value) {
   var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
@@ -285,15 +285,19 @@ var radius = (function (elem, value) {
   } else {
     borderRadius = min + borderRadius;
   }
-  elem.style.borderRadius = borderRadius + "px";
+  elem.style.borderRadius = borderRadius + 'px';
 });
+
+var reset$6 = function reset(elem) {
+  elem.style.borderRadius = '';
+};
 
 var Dancer = function () {
   function Dancer() {
     classCallCheck(this, Dancer);
 
-    this.dances = {};
     this.resets = {};
+    this.dances = {};
     this.registerDance('size', pulse, reset);
     this.registerDance('pulse', pulse, reset);
     this.registerDance('shake', shake, reset$1);
@@ -301,7 +305,7 @@ var Dancer = function () {
     this.registerDance('twist', twist, reset$3);
     this.registerDance('vanish', vanish, reset$4);
     this.registerDance('color', color, reset$5);
-    this.registerDance('radius', radius);
+    this.registerDance('radius', radius, reset$6);
   }
 
   createClass(Dancer, [{
@@ -317,7 +321,11 @@ var Dancer = function () {
     value: function dance(type, className, ratio, options) {
       var dance = type;
       if (typeof type === 'string') {
+        //In case of a built in dance
         dance = this.dances[type] || this.dances['pulse'];
+      } else {
+        //In case of a custom dance
+        dance = type.dance;
       }
       var elements = document.getElementsByClassName(className);
       Array.from(elements).forEach(function (elem) {
@@ -329,7 +337,11 @@ var Dancer = function () {
     value: function reset$$1(type, className) {
       var reset$$1 = type;
       if (typeof type === 'string') {
+        //In case of a built in dance
         reset$$1 = this.resets[type] || this.resets['pulse'];
+      } else {
+        //In case of a custom dance
+        reset$$1 = type.reset;
       }
       var elements = document.getElementsByClassName(className);
       Array.from(elements).forEach(function (elem) {
@@ -411,11 +423,11 @@ var Rythm$1 = function Rythm(forceAudioContext) {
     });
   };
 
-  this.stop = function (reset) {
+  this.stop = function (freeze) {
     _this.stopped = true;
     _this.player.stop();
     if (_this.animationFrameRequest) cancelAnimationFrame(_this.animationFrameRequest);
-    if (reset) _this.resetRythm();
+    if (!freeze) _this.resetRythm();
   };
 
   this.player = new Player(forceAudioContext);
@@ -432,3 +444,4 @@ var Rythm$1 = function Rythm(forceAudioContext) {
 return Rythm$1;
 
 })));
+//# sourceMappingURL=rythm.js.map

@@ -6,7 +6,6 @@ window.onload = function(){
     .then((data) => {
       const contributors = data.filter(d => d.author.login !== 'bplouzennec' && d.author.login !== 'Okazari')
       const contributor = contributors[Math.floor(Math.random() * contributors.length)].author
-      console.log(contributor)
       document.getElementById('shout').innerHTML = `
         <div class="thanks">Thanks for your contribution !</div>
         <img class="contributor-avatar" src="${contributor.avatar_url}" />
@@ -77,8 +76,6 @@ window.onload = function(){
   document.getElementById('startBottom').addEventListener('click', onStartClick)
   document.getElementById('stop').addEventListener('click', onStopClick)
   document.getElementById('stopBottom').addEventListener('click', onStopClick)
-  document.getElementById('stopReset').addEventListener('click', onStopResetClick)
-  document.getElementById('stopResetBottom').addEventListener('click', onStopResetClick)
 
   var bottomPlayerShow = false
   var showPoint = 205

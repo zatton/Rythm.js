@@ -117,11 +117,11 @@ rythm.plugMicrophone().then(function(){...})
 //Let's dance
 rythm.start();
 
-//Stop the party
-rythm.stop();
+/* Stop the party
+ * @freeze: Set this to true if you want to prevent the element to reset to their initial position
+ */
+rythm.stop(freeze);
 
-//Stop the party and clean up the house (reset elements)
-rythm.stop(true);
 ```
 
 Build in classes with "pulse" effect
@@ -178,7 +178,11 @@ To see each visual effect, you can go to the [Demo](https://okazari.github.io/Ry
 
 Custom dance type
 -------
-If you want to use your own dance type, you can give a function as the 2nd argument of `addRythm`
+If you want to use your own dance type, you need to give an object as the 2nd argument of `addRythm` instead of a built in dance key.
+
+This object must have two properties :
+ - dance: The custom function to make elements dance
+ - reset: The associated custom function that will be called to reset element style.
 
 ```js
 /* The custom function signature is :
@@ -193,7 +197,15 @@ const pulse = (elem, value, options = {}) => {
   elem.style.transform = `scale(${min + scale})`
 }
 
-addRythm('my-css-class', pulse, 150, 40)
+/* The reset function signature is :
+ * @elem: The element to reset
+ */
+const resetPulse = elem => {
+  elem.style.transform = ''
+}
+
+addRythm('my-css-class', { dance: pulse, reset: resetPulse }, 150, 40)
+
 ```
 
 

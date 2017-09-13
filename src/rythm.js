@@ -60,11 +60,11 @@ export default class Rythm {
     })
   }
 
-  stop = (reset) => {
+  stop = (freeze) => {
     this.stopped = true
     this.player.stop()
     if (this.animationFrameRequest) cancelAnimationFrame(this.animationFrameRequest)
-    if (reset) this.resetRythm()
+    if (!freeze) this.resetRythm()
   }
 
 }

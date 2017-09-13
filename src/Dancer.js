@@ -5,7 +5,7 @@ import jump, {reset as jumpReset} from './dances/jump.js'
 import twist, {reset as twistReset} from './dances/twist.js'
 import vanish, {reset as vanishReset} from './dances/vanish.js'
 import color, {reset as colorReset} from './dances/color.js'
-import radius from './dances/radius.js'
+import radius, {reset as radiusReset} from './dances/radius.js'
 
 class Dancer {
   constructor() {
@@ -18,7 +18,7 @@ class Dancer {
     this.registerDance('twist', twist, twistReset)
     this.registerDance('vanish', vanish, vanishReset)
     this.registerDance('color', color, colorReset)
-    this.registerDance('radius', radius)
+    this.registerDance('radius', radius, radiusReset)
   }
 
   registerDance(type, dance, reset = () => {}) {
@@ -29,8 +29,12 @@ class Dancer {
   dance(type, className, ratio, options) {
     let dance = type
     if( typeof type === 'string' ) {
+      //In case of a built in dance
       dance = this.dances[type] || this.dances['pulse']
-    } 
+    } else {
+      //In case of a custom dance
+      dance = type.dance
+    }
     const elements = document.getElementsByClassName(className)
     Array.from(elements).forEach(elem => dance(elem, ratio, options))
   }
@@ -38,8 +42,12 @@ class Dancer {
   reset(type, className) {
     let reset = type
     if( typeof type === 'string' ) {
+      //In case of a built in dance
       reset = this.resets[type] || this.resets['pulse']
-    } 
+    } else {
+      //In case of a custom dance
+      reset = type.reset
+    }
     const elements = document.getElementsByClassName(className)
     Array.from(elements).forEach(elem => reset(elem))
   }
