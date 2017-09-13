@@ -229,9 +229,10 @@ Any pull request will be apreciated. You can start coding on this project follow
 Adding new dance type
 ---------
 
-In v2.0.x adding a new dance type is pretty easy
+In v2.2.x adding a new dance type is pretty easy
 + Create a new file in `src\dances`
 + This file must export your custom dance type function
++ This file must export a reset function
 
 For example, here is the content of `jump.js file`
 
@@ -247,13 +248,20 @@ export default (elem, value, options = {}) => {
   const jump = (max - min) * value
   elem.style.transform = `translateY(${-jump}px)`
 }
+
+/* The reset function signature is :
+ * @elem: The element to reset
+ */
+export const reset = elem => {
+  elem.style.transform = ''
+}
 ```
 + Import it and register it into the constructor of `Dancer.js` file
 ```js
-import jump from './dances/jump.js'
+import jump, { reset as resetJump } from './dances/jump.js'
 class Dancer {
   constructor() {
-    this.registerDance('jump', jump)
+    this.registerDance('jump', jump, resetJump)
   }
 }
 ```
