@@ -77,7 +77,7 @@ var Analyser = function Analyser() {
     });
     var scale = max - min;
     var actualValue = _this.frequences[index] - min;
-    var percentage = actualValue / scale;
+    var percentage = scale === 0 ? 0 : actualValue / scale;
     return _this.startingScale + _this.pulseRatio * percentage;
   };
 
@@ -119,6 +119,8 @@ var Player = function Player(forceAudioContext) {
     if (_this.currentInputType !== _this.inputTypeList['STREAM']) {
       Analyser$1.analyser.connect(_this.audioCtx.destination);
       _this.audio.addEventListener("ended", _this.stop);
+    } else {
+      Analyser$1.analyser.disconnect();
     }
   };
 
@@ -295,7 +297,7 @@ var reset$6 = function reset(elem) {
 var blur = (function (elem, value) {
   var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-  var max = !isNaN(options.max) ? options.max : 10;
+  var max = !isNaN(options.max) ? options.max : 8;
   var min = !isNaN(options.min) ? options.min : 0;
   var blur = (max - min) * value;
   if (options.reverse) {
@@ -308,6 +310,8 @@ var blur = (function (elem, value) {
 
 var reset$7 = function reset(elem) {
   elem.style.filter = '';
+};
+
 var coefficientMap = {
   up: -1,
   down: 1,
@@ -328,7 +332,7 @@ var swing = (function (elem, value) {
   elem.style.transform = 'translate3d(' + xCoefficient * radius * Math.cos(value * Math.PI) + 'px, ' + yCoefficient * radius * Math.sin(value * Math.PI) + 'px, 0)';
 });
 
-var reset$7 = function reset(elem) {
+var reset$8 = function reset(elem) {
   elem.style.transform = '';
 };
 
@@ -347,7 +351,7 @@ var Dancer = function () {
     this.registerDance('color', color, reset$5);
     this.registerDance('radius', radius, reset$6);
     this.registerDance('blur', blur, reset$7);
-    this.registerDance('swing', swing, reset$7);
+    this.registerDance('swing', swing, reset$8);
   }
 
   createClass(Dancer, [{
