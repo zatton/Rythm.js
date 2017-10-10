@@ -292,6 +292,22 @@ var reset$6 = function reset(elem) {
   elem.style.borderRadius = '';
 };
 
+var blur = (function (elem, value) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  var max = !isNaN(options.max) ? options.max : 10;
+  var min = !isNaN(options.min) ? options.min : 0;
+  var blur = (max - min) * value;
+  if (options.reverse) {
+    blur = max - blur;
+  } else {
+    blur = min + blur;
+  }
+  elem.style.filter = 'blur(' + blur + 'px)';
+});
+
+var reset$7 = function reset(elem) {
+  elem.style.filter = '';
 var coefficientMap = {
   up: -1,
   down: 1,
@@ -330,6 +346,7 @@ var Dancer = function () {
     this.registerDance('vanish', vanish, reset$4);
     this.registerDance('color', color, reset$5);
     this.registerDance('radius', radius, reset$6);
+    this.registerDance('blur', blur, reset$7);
     this.registerDance('swing', swing, reset$7);
   }
 
