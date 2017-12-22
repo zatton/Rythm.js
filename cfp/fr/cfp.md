@@ -27,8 +27,7 @@ Javascript addict, i love to play with recents front-end frameworks such as Reac
 
 Notes au Jury
 =====
-L'idée est de présenter un peu toutes les annecdotes qui ont eu lieu dans l'histoire de ma librairie et surtout de mettre l'accent sur les points importants qui ont selon moi ont contribué au succès de la librairie. 
-Outre la part de chance, je veux parler de l'importance de :
+L'idée est de mettre l'accent sur les points importants qui ont selon moi ont contribué au succès de la librairie. Outre la part de chance, je veux parler de l'importance de :
  - La documentation.
  - Ecrire toutes ses idées en issues.
  - Avoir une belle démo.
