@@ -4,7 +4,8 @@ Et pourquoi pas... Rythm.js ?
 
 Abstract
 ===
-Parti d'une idée saugrenue rapidement développée sur une journée d'intercontrat, Rythm.js possède maintenant plus de 2 850 stars sur github. Le principe ? Faire bouger des éléments HTML au rythme de la musique ! Venez découvrir l'histoire derrière Rythm.js ainsi que mes conclusions personnelles sur ce qui l'a populaire dans ce retour d'expérience sur le développement de librairies open-sources.
+
+Mars 2016, journée d'intercontrat. J'ai toujours eu envie de tester la web audio API, j'en profite pour essayer de faire bouger un élément html au rythme de la musique. 2 ans plus tard cette idée s'appelle Rythm.js et compte 2 800 stars sur github... wait what ? Je suis le premier étonné de ce succès mais cela m'a permis d'apprendre quelques astuces sur le développement de la promotion d'une librairie open source. Car même s'il est difficile de fabriquer son succès, ces stars ne sont pas pour autant le fruit du hasard. Venez découvrir l'histoire derrière Rythm.js et les enseignements que j'ai pu en tirer.
 
 Inpiration Antoine 
 ==
