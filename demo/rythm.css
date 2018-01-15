@@ -9,6 +9,16 @@ h3 {
   font-size: 1.5em;
 }
 
+h2 {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
 .patch-title {
   min-width: 600px;
 }
@@ -16,6 +26,36 @@ h3 {
 .patch-title h1 {
   margin: 0;
   margin-top: 40px;
+}
+
+#quote {
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  max-width: 400px;
+  border: solid 1px white;
+  border-radius: 5px;
+  min-width: 200px;
+}
+
+#quote-text {
+  margin: 5px;
+  text-align: justify;
+  font-style: italic;
+}
+
+.quote-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#quote-author {
+  margin: 5px;
+  margin-bottom: 0;
+  font-weight: 600;
+  width: calc(100% - 10px);
+  text-align: right;
 }
 
 #shout {
@@ -66,6 +106,10 @@ h3 {
   padding: 10px;
   background-color: #000010;
   right: 50px;
+}
+
+#player {
+  margin-bottom: 10px;
 }
 
 #playerBottom {

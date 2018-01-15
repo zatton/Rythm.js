@@ -14,6 +14,15 @@
       <h2>
         A javascript library that makes your page dance.
       </h2>
+      <div id="quote">
+        <div class="quote-title">Random quote</div>
+        <div id="quote-text">
+          "It's fun for a demo. But if I ever find it used on a web page I visit, I shall track the owner down and place them in isolation for life."
+        </div>
+        <div id="quote-author">
+          crispinb
+        </div>
+      </div>
       <div id='player'>
         <button id='start'>Start Demo</button>
         <button id='stop'>Stop Demo</button>
@@ -385,6 +394,32 @@
     </div>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/scrollingelement@1.5.2/scrollingelement.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript">
+      const quotes = [
+        { text: "I hope you're collecting what people song into the microphone. My wife just laid down a pretty sweet riff.", author: "jk3us" },
+        { text: "I think there's a bug, it also makes me dance.", author: "moogeekfull-stack" },
+        { text: "Where was this when I was making Geocities pages!?", author: "shabibbles" },
+        { text: "It's fun for a demo. But if I ever find it used on a web page I visit, I shall track the owner down and place them in isolation for life.", author: "crispinb" },
+        { text: "Jesus christ it's 1994 again", author: "WeaponizedMath" },
+        { text: "I don't know what it is but I like it!!!", author: "blairanderson" },
+        { text: "Turned on microphone, started finger drumming on laptop. This was more fun than I expected it to be.", author: "harel" },
+        { text: "This will be everywhere on April Fools 2018.", author: "prawn" },
+        { text: "Why.js", author: "Robby517" },
+        { text: "Blink tag 2: godzilla strikes back", author: "@erez" },
+        { text: "<Marque> tag back with vengeance", author: "@udayms" },
+        { text: "I. need. this. On. all. my. websites.", author: "@Lordmau5" },
+        { text: "With great power comes great responsibility. Or just obnoxious fun.", author: "@TheMeteorChef" },
+        { text: "I both recognize the obnoxiousness of this AND want to use it everywhere", author: "@ekmpls" },
+        { text: "lolwat.js", author: "@psychronautron" },
+        { text: "At this point, we're coming full circle back to my 1997 AngelFire site on Ultima Online... I'm OK with it.", author: "@ryanpoe85" },
+        { text: "<blink> tag on steroids!", author: "@master_mitch" },
+        { text: "This is why I love internet", author: "@builtbymiken" },
+        { text: "Played around with[...]. accidentally created a nightmare", author: "@becckitt" },
+      ]
+      const quote = quotes[Math.floor(Math.random() * quotes.length)]
+      document.getElementById('quote-author').innerText = quote.author
+      document.getElementById('quote-text').innerText = quote.text
+    </script>
 		<script type="text/javascript" src="./rythm.js"></script>
     <script type="text/javascript" src="./demo/example.js"></script>
   </body>

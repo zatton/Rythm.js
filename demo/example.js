@@ -3,6 +3,7 @@ window.onload = function() {
     fetch('https://api.github.com/repos/okazari/rythm.js/stats/contributors')
       .then(d => d.json())
       .then(data => {
+        if (!data) return
         const contributors = data.filter(
           d => d.author.login !== 'bplouzennec' && d.author.login !== 'Okazari'
         )
