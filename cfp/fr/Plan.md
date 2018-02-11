@@ -59,6 +59,15 @@ Plan
 4. Un premier succès
 
 
+L'idée est de mettre l'accent sur les points importants qui ont selon moi ont contribué au succès de la librairie. Outre la part de chance, je veux parler de l'importance de :
+
+La documentation.
+Ecrire toutes ses idées en issues.
+Avoir une belle démo.
+Perserverer.
+Tester ses idées, même les plus improbables.
+Créer un cadre qui donne envie de contribuer.
+
 Helper
 =====
 http://www.timqian.com/star-history/#okazari/rythm.js
