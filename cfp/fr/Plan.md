@@ -39,7 +39,7 @@ THE END ?
 
 Pour déconner = fait en mode "Bonne vieille lib" = considérer que c'est une lib à succès : Gros travail sur la doc, ajout de badges pour faire genre (Code climate + Travis... Echo "test is for weaks")
 
-La voix du succès
+La voie du succès
 -------------------
 
 Diffusion au sein de Z => conseil = poster sur EchoJS & équivalents (EchoJS + JavascriptKicks)
