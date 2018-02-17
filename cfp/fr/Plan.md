@@ -1,7 +1,8 @@
 Plan
 ====
 
-1. L'idée
+L'idée
+------
 
 J'aime le design => L'UX m'interesse => J'ai pas le meilleur temps de l'expérimentation UX === Geocities
 
@@ -11,7 +12,8 @@ Découverte de la web audio-api => Puissance over 9000 => Faut que je l'utilise
 
 => OMG I NEED RYTHM.JS
 
-2. Comment ça marche ?
+Comment ça marche ?
+--------------
 
 Intercontrat 12 Mars 2016
 
@@ -37,7 +39,8 @@ THE END ?
 
 Pour déconner = fait en mode "Bonne vieille lib" = considérer que c'est une lib à succès : Gros travail sur la doc, ajout de badges pour faire genre (Code climate + Travis... Echo "test is for weaks")
 
-3. Un premier succès
+La voix du succès
+-------------------
 
 Diffusion au sein de Z => conseil = poster sur EchoJS & équivalents (EchoJS + JavascriptKicks)
 
@@ -95,6 +98,8 @@ THE END v4.0 ?
 Le succès étant au RDV => Pousser à la contribution
 
 Refacto => + guide de contribution dans le readme => Quelques PR => Ajout d'un shoutout pour remercier les contributeurs => des PRs
+
+Resulat => 33 PR
 
 THE END v5.0 ?
 
