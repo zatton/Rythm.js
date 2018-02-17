@@ -1,0 +1,39 @@
+#root {
+  height: 100vh;
+}
+
+.speaker {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 100;
+  background-color: #9c2231;
+  width: 50px;
+  border-radius: 25px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 500ms ease-out, left 500ms ease-out;
+}
+
+.speaker > div {
+  width: 35px;
+  height: 35px;
+  background-color: #222;
+  border-radius: 30px;
+  transition: width 500ms ease-out, height 500ms ease-out;
+}
+
+.speaker.center {
+  bottom: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  left: calc(50% - 40px);
+}
+
+.speaker.center > div {
+  width: 0;
+  height: 0;
+}
