@@ -25,12 +25,26 @@
   transition: width 500ms ease-out, height 500ms ease-out;
 }
 
+.row {
+  display: flex;
+}
+
+.center-y {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .speaker.center {
   bottom: calc(50% - 40px);
   width: 80px;
   height: 80px;
   border-radius: 80px;
   left: calc(50% - 40px);
+}
+
+img {
+  border: 0 !important;
 }
 
 .speaker.center > div {
