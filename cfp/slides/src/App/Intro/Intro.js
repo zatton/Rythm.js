@@ -6,6 +6,8 @@ import material from './material.jpg'
 import geo from './geo.jpg'
 import welcome from './welcome.gif'
 import construction from './construction.png'
+import drama from './drama.jpg'
+
 const Intro = () => {
   return (
     <Slide>
@@ -39,6 +41,9 @@ const Intro = () => {
       </Slide>
       <Slide>
         <blink><h2>{'<blink> #dead'}</h2></blink>
+      </Slide>
+      <Slide>
+        <img src={drama} />
       </Slide>
     </Slide>
   )

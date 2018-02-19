@@ -5,7 +5,7 @@
 .speaker {
   position: fixed;
   bottom: 40px;
-  left: 40px;
+  left: 50px;
   z-index: 100;
   background-color: #9c2231;
   width: 50px;
