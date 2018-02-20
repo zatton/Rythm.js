@@ -113,12 +113,12 @@ class App extends Component {
       <React.Fragment>
         <div className="reveal">
           <div className="slides">
+            <How />
             <Slide>
               <h2>Et pourquoi pas...</h2>
               <img src={logo} />
             </Slide>
             <Intro />
-            <How />
           </div>
         </div>
         <div
