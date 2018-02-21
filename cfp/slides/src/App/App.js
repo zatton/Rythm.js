@@ -16,6 +16,21 @@ rythm.addRythm('speaker', 'jump', 0, 50, {
   min: -5,
   max: 5,
 })
+rythm.addRythm('base-bar', {
+  dance:(elem, value) => {
+    elem.style.height = `${(value * 100).toFixed(0)}%`
+  },
+  reset:() => {
+  }
+}, 150, 40)
+rythm.addRythm('percentage', {
+  dance:(elem, value) => {
+    elem.textContent = (value * 100).toFixed(0)
+  },
+  reset:() => {
+
+  }
+}, 150, 40)
 
 class App extends Component {
   constructor(props) {
@@ -33,7 +48,7 @@ class App extends Component {
   }
 
   onSlideChange(event) {
-    console.log('coucou', event)
+    // console.log('coucou', event)
   }
 
   slideInSpeaker = () => {
@@ -47,6 +62,33 @@ class App extends Component {
       center: false,
     })
   }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="reveal">
+          <div className="slides">
+            <Slide>
+              <h2>Et pourquoi pas...</h2>
+              <img src={logo} />
+            </Slide>
+            <Intro />
+            <How />
+          </div>
+        </div>
+        <div
+          className={classnames('speaker', {
+            center: this.state.center,
+          })}
+        >
+          <div className="rythm-medium" />
+        </div>
+      </React.Fragment>
+    )
+  }
+}
+
+export default App
 
 //   <Slide>{"J'en parle aux gens conseil publication au cazou"}</Slide>
 //   <Slide>{"Création d'une Page de démo"}</Slide>
@@ -108,29 +150,3 @@ class App extends Component {
 // <Slide>
 //   <h2>{'Après tout... Et pourquoi pas ?'}</h2>
 // </Slide>
-  render() {
-    return (
-      <React.Fragment>
-        <div className="reveal">
-          <div className="slides">
-            <How />
-            <Slide>
-              <h2>Et pourquoi pas...</h2>
-              <img src={logo} />
-            </Slide>
-            <Intro />
-          </div>
-        </div>
-        <div
-          className={classnames('speaker', {
-            center: this.state.center,
-          })}
-        >
-          <div className="rythm-medium" />
-        </div>
-      </React.Fragment>
-    )
-  }
-}
-
-export default App

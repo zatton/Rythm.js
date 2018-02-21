@@ -2,13 +2,22 @@ import React, { Component } from 'react'
 import Reveal from 'reveal.js'
 
 class Slide extends Component {
+
+  onReveal = event => {
+    const { onReveal } = this.props
+    onReveal(event)
+  }
+
   componentDidMount() {
-    const { onReveal, state } = this.props
+    const { state } = this.props
     if (state) {
-      Reveal.addEventListener(state, event => {
-        onReveal(event)
-      })
+      Reveal.addEventListener(state, this.onReveal)
     }
+  }
+
+  componentWillUnmount() {
+    const { state } = this.props
+    Reveal.removeEventListener(state, this.onReveal)
   }
 
   render() {

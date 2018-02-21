@@ -1,0 +1,21 @@
+.base-bar-container {
+  height: 300px;
+  width: 40px;
+  border: 1px solid cyan !important;
+  display: flex;
+}
+
+.base-bar {
+  align-self: flex-end;
+  background-color: cyan;
+  height: 50%;
+  width: 100%;
+}
+
+.explainer {
+
+  color: cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Slide from '../Slide'
 import ux from './ux.jpg'
 import trololo from './trololo.jpg'
@@ -13,37 +13,37 @@ const Intro = () => {
     <Slide>
       <Slide>
         <h2>Benjamin Plouzennec</h2>
-        <div class="row">
-          <img src={trololo} />
-          <ul class="center-x center-y" style={{ marginLeft: 100 }}>
+        <div className="row">
+          <img alt="" src={trololo} />
+          <ul className="center-x center-y" style={{ marginLeft: 100 }}>
             <li>Twitter - @OkazariBzh</li>
             <li>Github - okazari</li>
           </ul>
         </div>
       </Slide>
       <Slide>
-        <img src={ux} />
+        <img alt="" src={ux} />
       </Slide>
       <Slide>
-        <img src={material} />
+        <img alt="" src={material} />
       </Slide>
       <Slide>
-        <img src={geo} />
+        <img alt="" src={geo} />
       </Slide>
       <Slide>
-        <img src={welcome} />
+        <img alt="" src={welcome} />
       </Slide>
       <Slide>
-        <img src={construction} />
+        <img alt="" src={construction} />
       </Slide>
       <Slide>
-        <marquee><h2>{'<marquee>'}</h2></marquee>
+        <marquee><h2>{'<ma  rquee>'}</h2></marquee>
       </Slide>
       <Slide>
         <blink><h2>{'<blink> #dead'}</h2></blink>
       </Slide>
       <Slide>
-        <img src={drama} />
+        <img alt="" src={drama} />
       </Slide>
     </Slide>
   )
