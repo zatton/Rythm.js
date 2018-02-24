@@ -7,6 +7,7 @@ import geo from './geo.jpg'
 import welcome from './welcome.gif'
 import construction from './construction.png'
 import drama from './drama.jpg'
+import no from './no.png'
 
 const Intro = () => {
   return (
@@ -37,10 +38,15 @@ const Intro = () => {
         <img alt="" src={construction} />
       </Slide>
       <Slide>
-        <marquee><h2>{'<ma  rquee>'}</h2></marquee>
+        <marquee>
+          <h2>{'<marquee>'}</h2>
+        </marquee>
+        <blink>
+          <h2>{'<blink>'}</h2>
+        </blink>
       </Slide>
       <Slide>
-        <blink><h2>{'<blink> #dead'}</h2></blink>
+        <img alt="" src={no} />
       </Slide>
       <Slide>
         <img alt="" src={drama} />
