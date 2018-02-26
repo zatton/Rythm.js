@@ -17,6 +17,24 @@
   transition: bottom 500ms ease-out, left 500ms ease-out;
 }
 
+.success-enter {
+  opacity: 0.01;
+}
+
+.success-enter.success-enter-active {
+  opacity: 1;
+  transition: all 300ms ease-in;
+}
+
+.success-leave {
+  opacity: 1;
+}
+
+.success-leave.success-leave-active {
+  opacity: 0.01;
+  transition: all 300ms ease-in;
+}
+
 .speaker > div {
   width: 35px;
   height: 35px;

@@ -8,6 +8,7 @@ import logo from './rythmjs.png'
 import Slide from './Slide'
 import Intro from './Intro'
 import How from './How'
+import Success from './Success'
 
 const rythm = new Rythm()
 rythm.plugMicrophone()
@@ -83,6 +84,7 @@ class App extends Component {
         >
           <div className="rythm-medium" />
         </div>
+        <Success />
       </React.Fragment>
     )
   }
