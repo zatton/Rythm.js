@@ -17,22 +17,46 @@
   transition: bottom 500ms ease-out, left 500ms ease-out;
 }
 
+.success {
+  width: 600px;
+}
+
+.success__label {
+  opacity: 1;
+}
+
 .success-enter {
+  opacity: 0;
+  width: 70px;
+  transition: width 400ms ease-in-out 400ms, opacity 200ms ease-in;
+}
+
+.success-enter .success__label {
+  transition: opacity 200ms ease-in 600ms;
   opacity: 0.01;
 }
 
-.success-enter.success-enter-active {
+.success-enter-active {
   opacity: 1;
-  transition: all 300ms ease-in;
+  width: 600px;
+}
+
+.success-enter-active .success__label {
+  opacity: 1;
 }
 
 .success-leave {
-  opacity: 1;
+  transition: width 400ms ease-in-out, opacity 200ms ease-in 400ms;
+}
+
+.success-leave .success__label {
+  transition: opacity 200ms ease-in;
+  opacity: 0;
 }
 
 .success-leave.success-leave-active {
-  opacity: 0.01;
-  transition: all 300ms ease-in;
+  opacity: 0;
+  width: 70px;
 }
 
 .speaker > div {

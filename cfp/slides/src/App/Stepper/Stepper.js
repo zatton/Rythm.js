@@ -13,15 +13,17 @@ class Stepper extends Component {
   }
 
   onFragmentShown = event => {
+    const { onStep = () => {} } = this.props
     const step = this.getStep(event)
     step && step.up && step.up()
-    this.props.onStep(step)
+    onStep(step)
   }
 
   onFragmentHidden = event => {
+    const { onStep = () => {} } = this.props
     const step = this.getStep(event)
     step && step.down && step.down()
-    this.props.onStep(step)
+    onStep(step)
   }
 
   componentDidMount() {

@@ -8,17 +8,7 @@ import evil from './evil.gif'
 import Base from './Base'
 import bars from './bars.png'
 import cimb from './cimb.jpg'
-
-//   <Slide>{'ça marche !! 170 lignes de codes'}</Slide>
-//   <Slide>{'Ajout du support du micro pour le fun'}</Slide>
-//   <Slide>
-//     {
-//       "A titre perso, développement en mode 'bonne vieille lib' à succès"
-//     }
-//   </Slide>
-//   <Slide>
-//     <h1>{'THE END ?'}</h1>
-//   </Slide>
+import fun from './fun.gif'
 
 const Intro = () => {
   return (
@@ -95,7 +85,20 @@ const Intro = () => {
         <h2 className="rythm-high">High</h2>
       </Slide>
       <Slide>
-        <h2>THE END ?</h2>
+        <img alt="" src={fun} />
+      </Slide>
+      <Slide>
+        <h1>170 lignes</h1>
+      </Slide>
+      <Slide>
+        <ul>
+          <li className="fragment">Github-page de démo</li>
+          <li className="fragment">Doc complète</li>
+          <li className="fragment">Badges</li>
+        </ul>
+      </Slide>
+      <Slide>
+        <h1>THE END ?</h1>
       </Slide>
     </Slide>
   )

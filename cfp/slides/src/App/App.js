@@ -9,6 +9,7 @@ import Slide from './Slide'
 import Intro from './Intro'
 import How from './How'
 import Success from './Success'
+import FirstPromo from './FirstPromo'
 
 const rythm = new Rythm()
 rythm.plugMicrophone()
@@ -69,6 +70,7 @@ class App extends Component {
       <React.Fragment>
         <div className="reveal">
           <div className="slides">
+            <FirstPromo />
             <Slide>
               <h2>Et pourquoi pas...</h2>
               <img src={logo} />
@@ -92,21 +94,6 @@ class App extends Component {
 
 export default App
 
-//   <Slide>{"J'en parle aux gens conseil publication au cazou"}</Slide>
-//   <Slide>{"Création d'une Page de démo"}</Slide>
-//   <Slide>{'EchoJS + JavascriptKicks + hackernews'}</Slide>
-//   <Slide>{'Petit succès => 30stars'}</Slide>
-//   <Slide>
-//     <blockquote>
-//       Alternative title: <br />
-//     How to Annoy Your Users Part 1: <br />
-//   Auto Playing Sound
-// </blockquote>
-// </Slide>
-// <Slide>
-//   <h1>{'THE END v2.0 ?'}</h1>
-// </Slide>
-//
 // <Slide>{'Plug-in atom => RennesJS'}</Slide>
 // <Slide>{'EchoJS - Javascript kicks'}</Slide>
 // <Slide>{'Trending github'}</Slide>
