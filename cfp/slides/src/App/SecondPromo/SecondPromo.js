@@ -6,6 +6,7 @@ import jsk from './jsk.jpg'
 import github from './github.png'
 import { SuccessService } from '../Success'
 import rennesjs from './rennesjs.png'
+import demo from './demo.png'
 
 const SecondPromo = () => {
   return (
@@ -33,6 +34,31 @@ const SecondPromo = () => {
         />
       </Slide>
       <Slide>
+        <h3>{'1 Idée'}</h3>
+        <h3>=</h3>
+        <h3>{'1 issue'}</h3>
+        <Stepper
+          id='SecondPromo3'
+          steps={[{
+            up: () => SuccessService.sendSuccess('PR de Egoist'),
+          },{
+            up: () => SuccessService.sendSuccess('Atteindre les 550 stars'),
+          }]}
+        />
+      </Slide>
+      <Slide>
+        <div>
+          <img alt="" src={demo} />
+        </div>
+      </Slide>
+      <Slide>
+        <img style={{width: 200, margin: 20}} alt='' src={echojs} />
+        <img style={{width: 200, margin: 20}} alt='' src={jsk} />
+      </Slide>
+      <Slide>
+        <h1>😢</h1>
+      </Slide>
+      <Slide>
         <h1>{'THE END v3.0 ?'}</h1>
       </Slide>
     </Slide>
@@ -40,16 +66,3 @@ const SecondPromo = () => {
 }
 
 export default SecondPromo
-
-// <Slide>{'Plug-in atom => RennesJS'}</Slide>
-// <Slide>{'EchoJS - Javascript kicks'}</Slide>
-// <Slide>{'Trending github'}</Slide>
-// <Slide>{'150Stars !'}</Slide>
-// <Slide>{'Idée = issue github'}</Slide>
-// <Slide>{'Pr de Egoist'}</Slide>
-// <Slide>{'1 mois plus tard => 550stars'}</Slide>
-// <Slide>
-//   {'Tentage de V2 => Nouvelle page de démo, EchoJS + JSKick'}
-// </Slide>
-// <Slide>
-//   <h1>{'THE END v3.0 ?'}</h1>
