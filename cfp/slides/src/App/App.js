@@ -71,7 +71,6 @@ class App extends Component {
       <React.Fragment>
         <div className="reveal">
           <div className="slides">
-            <SecondPromo />
             <Slide>
               <h2>Et pourquoi pas...</h2>
               <img src={logo} />
@@ -79,6 +78,7 @@ class App extends Component {
             <Intro />
             <How />
             <FirstPromo />
+            <SecondPromo />
           </div>
         </div>
         <div
@@ -97,8 +97,7 @@ class App extends Component {
 export default App
 
 
-// </Slide>
-// <Slide>{'6 mois plus tard : Septmbre 2017'}</Slide>
+// <Slide>{'6 mois plus tard : Septembre 2017'}</Slide>
 // <Slide>{'Ancien post Reddit'}</Slide>
 // <Slide>{'Relance EchoJS/Reddit'}</Slide>
 // <Slide>{'hackerNews : show HN'}</Slide>
