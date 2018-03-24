@@ -9,8 +9,8 @@ const FirstPromo = () => {
   return (
     <Slide>
       <Slide>
-        <img style={{width: 200, margin: 20}} alt='' src={echojs} />
-        <img style={{width: 200, margin: 20}} alt='' src={jsk} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={echojs} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={jsk} />
         <Stepper
           id='FirstPromo'
           steps={[{

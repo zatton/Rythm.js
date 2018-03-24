@@ -15,7 +15,7 @@ const Intro = () => {
       <Slide>
         <h2>Benjamin Plouzennec</h2>
         <div className="row">
-          <img alt="" src={trololo} />
+          <img alt="" src={trololo} style={{borderRadius: 20}}/>
           <ul className="center-x center-y" style={{ marginLeft: 100 }}>
             <li>Twitter - @OkazariBzh</li>
             <li>Github - okazari</li>
@@ -23,7 +23,7 @@ const Intro = () => {
         </div>
       </Slide>
       <Slide>
-        <img alt="" src={ux} />
+        <img alt="" src={ux} style={{borderRadius: 20}}/>
       </Slide>
       <Slide>
         <img alt="" src={material} />

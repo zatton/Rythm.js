@@ -11,6 +11,9 @@ import How from './How'
 import Success from './Success'
 import FirstPromo from './FirstPromo'
 import SecondPromo from './SecondPromo'
+import ThirdPromo from './ThirdPromo'
+import NewVibes from './NewVibes'
+import Conclusion from './Conclusion'
 
 const rythm = new Rythm()
 rythm.plugMicrophone()
@@ -79,6 +82,9 @@ class App extends Component {
             <How />
             <FirstPromo />
             <SecondPromo />
+            <ThirdPromo />
+            <NewVibes />
+            <Conclusion />
           </div>
         </div>
         <div
@@ -95,37 +101,3 @@ class App extends Component {
 }
 
 export default App
-
-
-// <Slide>{'6 mois plus tard : Septembre 2017'}</Slide>
-// <Slide>{'Ancien post Reddit'}</Slide>
-// <Slide>{'Relance EchoJS/Reddit'}</Slide>
-// <Slide>{'hackerNews : show HN'}</Slide>
-// <Slide>{"FLOP :'('"}</Slide>
-// <Slide>{'ou pas !'}</Slide>
-// <Slide>{'+180 HN => +300 stars'}</Slide>
-// <Slide>
-//   {'Trendings github => 4ème catégorie JS tweet blablabla'}
-// </Slide>
-// <Slide>{"L'évenement Poki"}</Slide>
-// <Slide>{'SUCCESS'}</Slide>
-// <Slide>{'THE END v4.0 ?'}</Slide>
-// <Slide>{'Nouvel objectif'}</Slide>
-// <Slide>{'Refacto => Guide de contribution'}</Slide>
-// <Slide>{'PRs'}</Slide>
-// <Slide>{'Shoutout aux contributeurs'}</Slide>
-// <Slide>{'Au total 33 pr'}</Slide>
-// <Slide>{'The  END v5.0 ?'}</Slide>
-// <Slide>{'TO BE CONTINUED'}</Slide>
-// <Slide>{'Clonclusions ?'}</Slide>
-// <Slide>{'Trouver des leviers pour atteindre les trendings'}</Slide>
-// <Slide>
-//   {"Démo rapide et avec de l'impact pour accrocher les gens"}
-// </Slide>
-// <Slide>{'Persever !!! #THEEND Pousser la chance.'}</Slide>
-// <Slide>
-//   <h2>{"N'abandonnez pas vos idée"}</h2>
-// </Slide>
-// <Slide>
-//   <h2>{'Après tout... Et pourquoi pas ?'}</h2>
-// </Slide>

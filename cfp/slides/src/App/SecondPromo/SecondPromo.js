@@ -15,8 +15,8 @@ const SecondPromo = () => {
         <img alt="" src={rennesjs} />
       </Slide>
       <Slide>
-        <img style={{width: 200, margin: 20}} alt='' src={echojs} />
-        <img style={{width: 200, margin: 20}} alt='' src={jsk} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={echojs} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={jsk} />
         <Stepper
           id='SecondPromo'
           steps={[{
@@ -52,8 +52,8 @@ const SecondPromo = () => {
         </div>
       </Slide>
       <Slide>
-        <img style={{width: 200, margin: 20}} alt='' src={echojs} />
-        <img style={{width: 200, margin: 20}} alt='' src={jsk} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={echojs} />
+        <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={jsk} />
       </Slide>
       <Slide>
         <h1>😢</h1>

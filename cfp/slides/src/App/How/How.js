@@ -16,13 +16,13 @@ const Intro = () => {
       <Slide>
         <h3>12 mars 2016</h3>
         <div className="fragment">
-          <img alt="" src={bored} style={{ maxHeight: 400 }} />
+          <img alt="" src={bored} style={{ maxHeight: 400 }}  />
           <h3>Intercontrat</h3>
         </div>
       </Slide>
       <Slide>
         <h3> Web audio API </h3>
-        <img alt="" src={webaudio} />
+        <img alt="" src={webaudio} style={{borderRadius: 20}} />
       </Slide>
       <Slide>
         <img alt="" className="fragment" src={bar} style={{ maxHeight: 200 }} />
