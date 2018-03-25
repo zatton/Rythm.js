@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Slide from '../Slide'
 import echojs from './echojs.png'
+import bots from './bots.png'
 import jsk from './jsk.jpg'
 import drama from './drama.jpg'
 import hn from './hn.jpg'
@@ -78,6 +79,9 @@ const ThirdPromo = () => {
             }
           ]}
         />
+      </Slide>
+      <Slide>
+        <img alt='' src={bots} />
       </Slide>
       <Slide>
         <img style={{ backgroundColor: 'white', borderRadius: 20 }} alt='' src={poki} />

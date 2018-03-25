@@ -47,9 +47,7 @@ const SecondPromo = () => {
         />
       </Slide>
       <Slide>
-        <div>
-          <img alt="" src={demo} />
-        </div>
+        <iframe src="https://okazari.github.io/Rythm.js/" width="800" height="500" />
       </Slide>
       <Slide>
         <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={echojs} />

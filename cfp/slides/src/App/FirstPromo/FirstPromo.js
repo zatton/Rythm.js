@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Slide from '../Slide'
 import echojs from './echojs.png'
+import ejs from './ejs.png'
 import jsk from './jsk.jpg'
 import Stepper from '../Stepper'
 import { SuccessService } from '../Success'
@@ -11,12 +12,15 @@ const FirstPromo = () => {
       <Slide>
         <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={echojs} />
         <img style={{width: 200, margin: 20, borderRadius: 20}} alt='' src={jsk} />
+      </Slide>
+      <Slide>
+        <img alt='' src={ejs} />
         <Stepper
           id='FirstPromo'
           steps={[{
             up: () => SuccessService.sendSuccess('Obtenir 30 stars'),
           }]}
-        />
+          />
       </Slide>
       <Slide>
         <blockquote>
