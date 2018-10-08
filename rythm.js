@@ -384,6 +384,19 @@ var reset$11 = function reset(elem) {
   elem.style.letterSpacing = '';
 };
 
+var fontSize = (function (elem, value) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  var max = !isNaN(options.max) ? options.max : 0.8;
+  var min = !isNaN(options.min) ? options.min : 1.2;
+  var fontSize = (max - min) * value + min;
+  elem.style.fontSize = fontSize + 'em';
+});
+
+var reset$12 = function reset(elem) {
+  elem.style.fontSize = '1em';
+};
+
 var borderWidth = (function (elem, value) {
   var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
@@ -393,7 +406,7 @@ var borderWidth = (function (elem, value) {
   elem.style.borderWidth = borderWidth + 'px';
 });
 
-var reset$12 = function reset(elem) {
+var reset$13 = function reset(elem) {
   elem.style.borderWidth = '';
 };
 
@@ -416,7 +429,8 @@ var Dancer = function () {
     this.registerDance('swing', swing, reset$9);
     this.registerDance('neon', neon, reset$10);
     this.registerDance('kern', kern, reset$11);
-    this.registerDance('borderWidth', borderWidth, reset$12);
+    this.registerDance('borderWidth', borderWidth, reset$13);
+    this.registerDance('fontSize', fontSize, reset$12);
   }
 
   createClass(Dancer, [{
@@ -555,3 +569,4 @@ var Rythm$1 = function Rythm(forceAudioContext) {
 return Rythm$1;
 
 })));
+//# sourceMappingURL=rythm.js.map

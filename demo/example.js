@@ -53,6 +53,8 @@ window.onload = function() {
   })
   rythm.addRythm('borderWidth1', 'borderWidth', 0, 2)
   rythm.addRythm('borderWidth2', 'borderWidth', 0, 2, { min: 2, max: 9 })
+  rythm.addRythm('fontSize1', 'fontSize', 0, 2)
+  rythm.addRythm('fontSize2', 'fontSize', 0, 2, { min: .9, max: 1.1 })
   rythm.addRythm('radius1', 'radius', 0, 10, { min: 0, max: 30 })
   rythm.addRythm('radius2', 'radius', 0, 10, { reverse: true, min: 0, max: 30 })
   rythm.addRythm('blur1', 'blur', 0, 10)
@@ -116,12 +118,12 @@ window.onload = function() {
   document.getElementById('stopBottom').addEventListener('click', onStopClick)
 
   var bottomPlayerShow = false
-  var showPoint = 205
+  var showPoint = 300
   var onScroll = function() {
-    var body = document.body
+    var scrollPos = window.scrollY
     var bottomPlayer = document.getElementById('playerBottom')
-    var shouldShow = !bottomPlayerShow && body.scrollTop > showPoint
-    var shouldHide = bottomPlayerShow && body.scrollTop <= showPoint
+    var shouldShow = !bottomPlayerShow && scrollPos > showPoint
+    var shouldHide = bottomPlayerShow && scrollPos <= showPoint
     if (shouldShow) {
       bottomPlayerShow = true
       bottomPlayer.className = 'show'
