@@ -171,7 +171,13 @@
 
     this.start = function() {
       if (_this.currentInputType === _this.inputTypeList['TRACK']) {
-        _this.audio.play()
+        if (_this.audioCtx.state === 'suspended') {
+          _this.audioCtx.resume().then(function() {
+            return _this.audio.play()
+          })
+        } else {
+          _this.audio.play()
+        }
       }
     }
 
