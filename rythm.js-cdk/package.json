@@ -1,0 +1,27 @@
+{
+  "name": "rythm.js-cdk",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "dependencies": {
+    "docz": "^0.13.7",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^0.13.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "styled-components": "^4.2.0"
+  },
+  "scripts": {
+    "start": "docz dev"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
