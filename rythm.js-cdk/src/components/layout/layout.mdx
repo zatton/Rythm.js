@@ -1,0 +1,21 @@
+import { Playground } from 'docz'
+import { Rows, Cols } from './layout'
+import { PrimaryBox } from '../boxes'
+
+# Rows and Columns
+
+<Playground>
+  <Rows gap="5px" layout="200px 200px">
+    <Cols layout="1 2" gap="5px">
+      <Rows layout="1 5" gap="5px">
+        <PrimaryBox>Box</PrimaryBox>
+        <PrimaryBox>Box</PrimaryBox>
+      </Rows>
+      <Rows layout="5 1" gap="5px">
+        <PrimaryBox>Box</PrimaryBox>
+        <PrimaryBox>Box</PrimaryBox>
+      </Rows>
+    </Cols>
+    <PrimaryBox>Box</PrimaryBox>
+  </Rows>
+</Playground>

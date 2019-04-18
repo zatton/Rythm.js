@@ -12,7 +12,7 @@
     "prepublish": "npm run build",
     "test": "echo \"No test specified\" && exit 0",
     "build": "node ./build.js",
-    "build:watch": "node ./build.js -- -w",
+    "build:watch": "node ./build.js -w",
     "prettier": "prettier src/**/*.js --write --config .prettierrc",
     "precommit": "lint-staged"
   },

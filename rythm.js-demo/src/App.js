@@ -1,7 +1,10 @@
 import React from 'react'
-// import { Button } from 'rythm.js-cdk'
-// console.log(Button)
-// const App = () => <Button color="tomato" />
+import { Button } from 'rythm.js-cdk'
 
-const App = () => <div />
+const App = () => (
+  <>
+    <Button color="tomato" />
+  </>
+)
+
 export default App
