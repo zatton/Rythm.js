@@ -1,1 +1,5 @@
 node_modules
+.docz
+rythm.js.map
+rythm.min.js
+rythm.min.js.map

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { withContainer } from '../../utils'
-import { primary, secondary, success, danger } from '../../styles/colors'
+import { withContainer } from '../../../utils'
+import { primary, secondary, success, danger } from '../../../styles/colors'
 
-export const Button = styled.button`
+const Button = styled.button`
   transition: 0.2s;
   padding: 10px;
   background-color: transparent;
@@ -18,8 +18,12 @@ export const Button = styled.button`
   }
 `
 
-export const PrimaryButton = withContainer({
-  color: primary,
+export default Button
+
+export const PrimaryButton = withContainer(() => {
+  return {
+    color: primary,
+  }
 })(Button)
 
 export const SecondaryButton = withContainer({
