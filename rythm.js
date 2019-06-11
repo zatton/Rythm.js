@@ -2,8 +2,8 @@
   typeof exports === 'object' && typeof module !== 'undefined'
     ? (module.exports = factory())
     : typeof define === 'function' && define.amd
-      ? define(factory)
-      : (global.Rythm = factory())
+    ? define(factory)
+    : (global.Rythm = factory())
 })(this, function() {
   'use strict'
 
@@ -474,6 +474,46 @@
     elem.style.borderWidth = ''
   }
 
+  var tilt = function(elem, value) {
+    var options =
+      arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {}
+
+    var max = !isNaN(options.max) ? options.max : 25
+    var min = !isNaN(options.min) ? options.min : 20
+    var rotate3d = (max - min) * value
+    if (options.reverse) {
+      rotate3d = max - rotate3d
+    }
+    elem.style.transform = 'matrix(1, ' + Math.sin(rotate3d) + ', 0, 1 , 0 ,0)'
+  }
+
+  var reset$14 = function reset(elem) {
+    elem.style.transform = ''
+  }
+
+  var fontColor = function(elem, value) {
+    var options =
+      arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {}
+
+    var from = options.from || [0, 0, 0]
+    var to = options.to || [255, 255, 255]
+    var scaleR = (to[0] - from[0]) * value
+    var scaleG = (to[1] - from[1]) * value
+    var scaleB = (to[2] - from[2]) * value
+    elem.style.color =
+      'rgb(' +
+      Math.floor(to[0] - scaleR) +
+      ', ' +
+      Math.floor(to[1] - scaleG) +
+      ', ' +
+      Math.floor(to[2] - scaleB) +
+      ')'
+  }
+
+  var reset$15 = function reset(elem) {
+    elem.style.color = ''
+  }
+
   var Dancer = (function() {
     function Dancer() {
       classCallCheck(this, Dancer)
@@ -495,6 +535,8 @@
       this.registerDance('kern', kern, reset$11)
       this.registerDance('borderWidth', borderWidth, reset$13)
       this.registerDance('fontSize', fontSize, reset$12)
+      this.registerDance('tilt', tilt, reset$14)
+      this.registerDance('fontColor', fontColor, reset$15)
     }
 
     createClass(Dancer, [
@@ -645,3 +687,4 @@
 
   return Rythm$1
 })
+//# sourceMappingURL=rythm.js.map
