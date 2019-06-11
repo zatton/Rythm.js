@@ -6,13 +6,18 @@ import {
   DangerButton,
   SecondaryButton,
 } from './Button'
-
-import { Rows } from '../layout'
+import { Rows, Content } from '../layout'
 
 # Buttons
 
 <Playground>
-  <Rows gap="5px">
-    <Button>Default Button</Button>
-  </Rows>
+  <Content>
+    <Rows gap="5px">
+      <Button>Default Button</Button>
+      <PrimaryButton>PrimaryButton</PrimaryButton>
+      <SecondaryButton>SecondaryButton</SecondaryButton>
+      <SuccessButton>SuccessButton</SuccessButton>
+      <DangerButton>DangerButton</DangerButton>
+    </Rows>
+  </Content>
 </Playground>

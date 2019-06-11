@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import { withContainer } from '../../../utils'
-import { primary, secondary, success, danger } from '../../../styles/colors'
+import {
+  primary,
+  secondary,
+  success,
+  danger,
+  white,
+  background,
+} from '../../../styles/colors'
 
 const Button = styled.button`
   transition: 0.2s;
@@ -14,16 +21,17 @@ const Button = styled.button`
   :hover {
     border-color: transparent;
     color: ${({ backgroundColor = 'white' }) => backgroundColor};
-    background-color: ${({ color = 'black' }) => color};
+    background-color: ${({ color = 'white' }) => color};
   }
 `
 
-export default Button
+export default withContainer({
+  color: white,
+  backgroundColor: background,
+})(Button)
 
-export const PrimaryButton = withContainer(() => {
-  return {
-    color: primary,
-  }
+export const PrimaryButton = withContainer({
+  color: primary,
 })(Button)
 
 export const SecondaryButton = withContainer({

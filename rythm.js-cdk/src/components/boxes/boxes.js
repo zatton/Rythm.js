@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { primary, secondary, success, danger } from '../../styles/colors'
 import { withContainer } from '../../utils'
+import { Content } from '../layout'
 
-export const Box = styled.div`
+export const Box = styled(Content)`
   background-color: transparent;
   border: solid 1px ${({ color }) => color};
   border-radius: 5px;
-  padding: 10px;
   color: ${({ color }) => color};
 `
 

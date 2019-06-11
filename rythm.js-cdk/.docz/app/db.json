@@ -3,35 +3,76 @@
     "title": "Rythm.js Cdk",
     "description": "My awesome app using docz",
     "menu": [],
-    "ordering": "descending",
     "version": "0.1.0",
     "repository": null,
     "native": false,
     "codeSandbox": true,
-    "themeConfig": {}
+    "themeConfig": {},
+    "separator": "-"
   },
-  "entries": {
-    "src/components/buttons/Button/Button.mdx": {
-      "id": "a08e0c634aaa6ce141307d486e655a40",
-      "filepath": "src/components/buttons/Button/Button.mdx",
-      "link": null,
-      "slug": "src-components-buttons-button-button",
-      "route": "/src-components-buttons-button-button",
-      "name": "Button",
-      "order": 0,
-      "menu": null,
-      "headings": [
-        {
-          "depth": 1,
-          "slug": "button",
-          "value": "Button"
-        },
-        {
-          "depth": 2,
-          "slug": "basic-usage",
-          "value": "Basic usage"
-        }
-      ]
+  "props": [],
+  "entries": [
+    {
+      "key": "src/components/boxes/boxes.mdx",
+      "value": {
+        "id": "1437c6849a9dd24b7dacb33560dafe82",
+        "filepath": "src/components/boxes/boxes.mdx",
+        "link": "",
+        "slug": "src-components-boxes-boxes",
+        "route": "/src-components-boxes-boxes",
+        "name": "Boxes",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "boxes",
+            "depth": 1,
+            "value": "Boxes"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/buttons/buttons.mdx",
+      "value": {
+        "id": "ec31d0aaf9d2726ae9c76b6fec4e753d",
+        "filepath": "src/components/buttons/buttons.mdx",
+        "link": "",
+        "slug": "src-components-buttons-buttons",
+        "route": "/src-components-buttons-buttons",
+        "name": "Buttons",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "buttons",
+            "depth": 1,
+            "value": "Buttons"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/layout/layout.mdx",
+      "value": {
+        "id": "86a2961b9013f57d338a65f6adebd024",
+        "filepath": "src/components/layout/layout.mdx",
+        "link": "",
+        "slug": "src-components-layout-layout",
+        "route": "/src-components-layout-layout",
+        "name": "Layout",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "rows-columns-and-content",
+            "depth": 1,
+            "value": "Rows, Columns and Content"
+          },
+          {
+            "slug": "rows",
+            "depth": 2,
+            "value": "Rows"
+          }
+        ]
+      }
     }
-  }
+  ]
 }

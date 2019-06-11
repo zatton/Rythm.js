@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 import { withContainer } from '../../utils'
+import { background, white } from '../../styles/colors'
+import PropTypes from 'prop-types'
 
 const getFlexValue = value =>
   !value
@@ -26,6 +28,7 @@ export const Flex = styled.div`
       }
     `};
 `
+
 export const Rows = withContainer({
   direction: 'column',
 })(Flex)
@@ -33,3 +36,14 @@ export const Rows = withContainer({
 export const Cols = withContainer({
   direction: 'rows',
 })(Flex)
+
+Rows.propTypes = {
+  /** Blabla pouet pouet */
+  gap: PropTypes.string,
+}
+
+export const Content = styled(Rows)`
+  padding: 10px;
+  background-color: ${({ backgroundColor = background }) => backgroundColor};
+  color: ${({ color = white }) => color};
+`

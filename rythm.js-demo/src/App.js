@@ -3,7 +3,7 @@ import { Button } from 'rythm.js-cdk'
 
 const App = () => (
   <>
-    <Button color="tomato" />
+    <Button color="tomato">Toto</Button>
   </>
 )
 

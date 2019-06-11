@@ -1,15 +1,17 @@
 import { Playground } from 'docz'
 import { Box, PrimaryBox, SecondaryBox, SuccessBox, DangerBox } from './boxes'
-import { Rows } from '../layout'
+import { Rows, Content } from '../layout'
 
-# Buttons
+# Boxes
 
 <Playground>
-  <Rows gap="5px">
-    <Box>I'm a box !</Box>
-    <PrimaryBox>I'm a primary box !</PrimaryBox>
-    <SecondaryBox>I'm a secondary box !</SecondaryBox>
-    <SuccessBox>I'm a success box !</SuccessBox>
-    <DangerBox>I'm a danger box !</DangerBox>
-  </Rows>
+  <Content>
+    <Rows gap="5px">
+      <Box>I'm a box !</Box>
+      <PrimaryBox>I'm a primary box !</PrimaryBox>
+      <SecondaryBox>I'm a secondary box !</SecondaryBox>
+      <SuccessBox>I'm a success box !</SuccessBox>
+      <DangerBox>I'm a danger box !</DangerBox>
+    </Rows>
+  </Content>
 </Playground>
