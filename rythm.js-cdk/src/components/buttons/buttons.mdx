@@ -1,3 +1,4 @@
+import { Showcase } from '../docz'
 import { Playground } from 'docz'
 import {
   Button,
@@ -6,18 +7,18 @@ import {
   DangerButton,
   SecondaryButton,
 } from './Button'
-import { Rows, Content } from '../layout'
+import { Rows, Background, Content } from '../layout'
 
-# Buttons
+# Boxes
 
 <Playground>
-  <Content>
-    <Rows gap="5px">
+  <Background>
+    <Content>
       <Button>Default Button</Button>
       <PrimaryButton>PrimaryButton</PrimaryButton>
       <SecondaryButton>SecondaryButton</SecondaryButton>
       <SuccessButton>SuccessButton</SuccessButton>
       <DangerButton>DangerButton</DangerButton>
-    </Rows>
-  </Content>
+    </Content>
+  </Background>
 </Playground>

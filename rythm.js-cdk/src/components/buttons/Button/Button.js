@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { withContainer } from '../../../utils'
+import { darken } from 'polished'
 import {
   primary,
   secondary,
@@ -7,31 +8,35 @@ import {
   danger,
   white,
   background,
-} from '../../../styles/colors'
+  shadowNeon,
+} from '../../../styles'
 
 const Button = styled.button`
   transition: 0.2s;
   padding: 10px;
-  background-color: transparent;
-  border: solid 1px;
+  background-color: ${({ color = 'white' }) => color};
+  text-align: center;
+  border: 0;
   border-radius: 5px;
   cursor: pointer;
-  color: ${({ color }) => color};
+  box-shadow: ${({ color = 'white' }) => shadowNeon(color)};
+  color: ${({ backgroundColor = 'white' }) => backgroundColor};
   text-transform: uppercase;
   :hover {
-    border-color: transparent;
-    color: ${({ backgroundColor = 'white' }) => backgroundColor};
-    background-color: ${({ color = 'white' }) => color};
+    color: inherit;
+    background-color: transparent;
   }
 `
 
 export default withContainer({
   color: white,
   backgroundColor: background,
+  justifyContent: 'center',
 })(Button)
 
 export const PrimaryButton = withContainer({
   color: primary,
+  backgroundColor: background,
 })(Button)
 
 export const SecondaryButton = withContainer({
@@ -40,6 +45,7 @@ export const SecondaryButton = withContainer({
 
 export const SuccessButton = withContainer({
   color: success,
+  backgroundColor: background,
 })(Button)
 
 export const DangerButton = withContainer({

@@ -10,7 +10,19 @@
     "themeConfig": {},
     "separator": "-"
   },
-  "props": [],
+  "props": [
+    {
+      "key": "src/components/boxes/Box/Box.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Box",
+          "methods": [],
+          "actualName": "Box"
+        }
+      ]
+    }
+  ],
   "entries": [
     {
       "key": "src/components/boxes/boxes.mdx",
@@ -43,9 +55,9 @@
         "menu": "",
         "headings": [
           {
-            "slug": "buttons",
+            "slug": "boxes",
             "depth": 1,
-            "value": "Buttons"
+            "value": "Boxes"
           }
         ]
       }
@@ -70,6 +82,35 @@
             "slug": "rows",
             "depth": 2,
             "value": "Rows"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/texts/texts.mdx",
+      "value": {
+        "id": "366bc3e34926fe28bece4eeb443b85fd",
+        "filepath": "src/components/texts/texts.mdx",
+        "link": "",
+        "slug": "src-components-texts-texts",
+        "route": "/src-components-texts-texts",
+        "name": "Texts",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "texts-and-labels",
+            "depth": 1,
+            "value": "Texts and labels"
+          },
+          {
+            "slug": "texts",
+            "depth": 2,
+            "value": "Texts"
+          },
+          {
+            "slug": "titles",
+            "depth": 2,
+            "value": "Titles"
           }
         ]
       }

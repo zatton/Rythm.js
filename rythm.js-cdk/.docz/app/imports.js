@@ -11,4 +11,8 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-components-layout-layout" */ 'src/components/layout/layout.mdx'
     ),
+  'src/components/texts/texts.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-components-texts-texts" */ 'src/components/texts/texts.mdx'
+    ),
 }

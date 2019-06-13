@@ -1,1 +1,1 @@
-export * from './boxes'
+export * from './Box'
