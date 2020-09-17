@@ -1,11 +1,11 @@
 import Player from './Player.js'
-import analyser from './Analyser.js'
+import Analyser from './Analyser.js'
 import dancer from './Dancer.js'
 
 export default class Rythm {
   constructor(forceAudioContext) {
     this.player = new Player(forceAudioContext)
-    this.analyser = analyser
+    this.analyser = new Analyser()
     this.maxValueHistory = analyser.maxValueHistory
     this.dancer = dancer
     this.rythms = []

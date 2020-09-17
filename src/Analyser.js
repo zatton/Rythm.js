@@ -55,4 +55,4 @@ class Analyser {
   }
 }
 
-export default new Analyser()
+export default Analyser
